@@ -68,7 +68,7 @@ const ProgramSlider = () => {
 
     return (
         <div className="w-full py-10">
-            <h2 className="text-center text-[#280d4a] font-abhaya text-[64px] font-bold mb-6">
+            <h2 className="text-center text-[#280d4a] font-abhaya text-[64px] font-bold mb-[52px]">
                 Our Programs
             </h2>
             <div className="slider-container relative">
