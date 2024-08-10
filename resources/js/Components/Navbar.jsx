@@ -33,14 +33,14 @@ function Navbar() {
                 {LinkItems.map((item) => (
                     <Link
                         href={item.link}
-                        className="text-black text-lg font-normal font-inter leading-[27px]"
+                        className="text-black text-lg font-normal font-Gilroy font-semibold leading-[27px] "
                     >
                         {item.name}
                     </Link>
                 ))}
             </div>
             <div className="">
-                <Button className="px-[30px] py-[15px] text-base rounded-full bg-white text-black hover:text-white uppercase">
+                <Button className="px-[30px] py-[15px] text-base rounded-full bg-white text-black hover:text-white uppercase font-Gilroy font-semibold">
                     Give
                 </Button>
             </div>

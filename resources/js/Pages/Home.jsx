@@ -12,7 +12,7 @@ function Home() {
         <MainLayout>
             <Head title="Home" />
             <Hero />
-            <section className="container mt-[214px] mb-[120px] flex gap-[63px] relative">
+            <section className="container mt-[214px] mb-[120px] flex gap-[63px]">
                 <div className="w-1/2 pl-[120px]">
                     <div className="max-w-[528px]">
                         <div class=" text-black text-[32px] font-bold font-abhaya leading-[38.40px]">
@@ -28,10 +28,10 @@ function Home() {
                             this end of the age.
                         </div>
                         <div className="flex space-x-[15px]">
-                            <Button className="rounded-full p-5">
+                            <Button className="rounded-full p-5 font-Gilroy font-semibold text-base">
                                 Become Member
                             </Button>
-                            <Button className="rounded-full p-5 text-[#272727] bg-[#f1f1f1] hover:bg-gray-200 ">
+                            <Button className="rounded-full p-5 text-[#272727] bg-[#f1f1f1] hover:bg-gray-200 font-Gilroy font-semibold text-base">
                                 About Us
                             </Button>
                         </div>
@@ -54,7 +54,7 @@ function Home() {
                             class="max-w-[730px] max-h-[602px] w-full rounded-[30px]"
                             src="/images/seek.png"
                         />
-                        <div class="absolute top-[224px] right-[267px] max-w-[566px] space-y-[30px] z-10">
+                        <div class="absolute top-[101px] right-[235px] max-w-[566px] space-y-[30px] z-10">
                             <div className="text-white text-[32px] font-bold font-abhaya leading-[38.40px]">
                                 We seek only to see the coming of the King and
                                 His Kingdom until His reality is furnished in
@@ -67,7 +67,7 @@ function Home() {
                                 of Bread with one another
                             </div>
                         </div>
-                        <div class="absolute bottom-[76px] right-[180px] text-[#c48efa]/20 text-[300px] font-normal font-abhaya leading-[240px] z-10">
+                        <div class="absolute -bottom-[17px] right-[148px] text-[#c48efa]/20 text-[300px] font-normal font-abhaya leading-[240px] z-10">
                             Belong
                         </div>
                     </div>
@@ -122,10 +122,10 @@ function Home() {
                             <br />
                             Streams
                         </div>
-                        <div class="text-[#9a9a9a] text-2xl font-gilroyBold leading-9 mt-6">
+                        <div class="text-[#9a9a9a] text-2xl font-Gilroy font-medium leading-9 mt-6">
                             25 August, 2024
                         </div>
-                        <Button className="rounded-full text-base font-gilroyHeavy mt-9">
+                        <Button className="rounded-full text-base font-Gilroy font-semibold mt-9">
                             Register now
                         </Button>
                     </div>

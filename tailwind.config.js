@@ -63,11 +63,7 @@ export default {
             fontFamily: {
                 inter: ["Inter"],
                 abhaya: ["Abhaya Libre"],
-                gilroyHeavy: ["GilroyHeavy", , "sans-serif"],
-                gilroyBold: ["GilroyBold", "sans-serif"],
-                gilroyMedium: ["GilroyMedium", "sans-serif"],
-                gilroyRegular: ["GilroyRegular", , "sans-serif"],
-                gilroySemiBold: ["GilroySemiBold"],
+                Gilroy: ["Gilroy", "sans-serif"],
             },
             keyframes: {
                 "accordion-down": {
