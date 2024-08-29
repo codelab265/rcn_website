@@ -38,7 +38,7 @@ function Store() {
                     }}
                     className="absolute -top-[458px] -right-[535px] w-[1155px] h-[1155px]"
                 ></div>
-                <div className="right-[50px] top-[200px] absolute bottom-0 w-[51px] h-[51px]">
+                <div className="right-[144px] top-[195px] absolute bottom-0 w-[51px] h-[51px]">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="51"
@@ -67,7 +67,68 @@ function Store() {
                         </defs>
                     </svg>
                 </div>
-                <div className="right-[50px] bottom-[52px] absolute w-[21px] h-[21px]">
+                <div className="right-[52px] bottom-[52px] absolute w-[21px] h-[21px]">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="21"
+                        height="21"
+                        viewBox="0 0 21 21"
+                        fill="none"
+                    >
+                        <circle
+                            cx="10.5"
+                            cy="10.5"
+                            r="10.5"
+                            transform="matrix(-1 0 0 1 21 0)"
+                            fill="url(#paint0_radial_3065_267)"
+                        />
+                        <defs>
+                            <radialGradient
+                                id="paint0_radial_3065_267"
+                                cx="0"
+                                cy="0"
+                                r="1"
+                                gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(8.20313 7.21875) rotate(53.9726) scale(8.92597 12.4667)"
+                            >
+                                <stop stop-color="#BEE46C" />
+                                <stop offset="1" stop-color="#9AC53F" />
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div className="left-[196px] top-[156px] absolute w-[31px] h-[31px]">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="31"
+                        height="31"
+                        viewBox="0 0 31 31"
+                        fill="none"
+                    >
+                        <circle
+                            cx="10.5"
+                            cy="10.5"
+                            r="10.5"
+                            transform="matrix(-1 0 0 1 31 0)"
+                            fill="url(#paint0_radial_3065_267)"
+                        />
+                        <defs>
+                            <radialGradient
+                                id="paint0_radial_3065_267"
+                                cx="0"
+                                cy="0"
+                                r="1"
+                                gradientUnits="userSpaceOnUse"
+                                gradientTransform="translate(8.20313 7.21875) rotate(53.9726) scale(8.92597 12.4667)"
+                            >
+                                <stop stop-color="#BEE46C" />
+                                <stop offset="1" stop-color="#9AC53F" />
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                <div className="left-[53px] bottom-[190px] absolute w-[21px] h-[21px]">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="21"
