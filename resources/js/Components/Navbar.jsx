@@ -6,22 +6,30 @@ function Navbar() {
     const LinkItems = [
         {
             name: "About",
+            link: "/about",
+        },
+
+        {
+            name: "Programmes",
             link: "/",
         },
 
         {
-            name: "Programs",
+            name: "Community",
             link: "/",
         },
-
         {
-            name: "E-Church",
-            link: "/",
+            name: "Store",
+            link: "/store",
         },
 
         {
             name: "Partnership",
             link: "/",
+        },
+        {
+            name: "Contact Us",
+            link: "/contact",
         },
     ];
     return (
@@ -33,7 +41,7 @@ function Navbar() {
                 {LinkItems.map((item) => (
                     <Link
                         href={item.link}
-                        className="text-black text-lg font-normal font-Gilroy font-semibold leading-[27px] "
+                        className="text-black text-lg font-Gilroy font-semibold leading-[27px] "
                     >
                         {item.name}
                     </Link>

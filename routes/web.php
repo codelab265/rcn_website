@@ -9,6 +9,19 @@ Route::get('/', function () {
     return Inertia::render('Home');
 });
 
+Route::get('/about', function () {
+    return Inertia::render('About');
+});
+
+Route::get('/store', function () {
+    return Inertia::render('Store');
+});
+
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+});
+
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

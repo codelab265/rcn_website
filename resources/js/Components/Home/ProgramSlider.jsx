@@ -61,6 +61,10 @@ const ProgramSlider = () => {
         slidesToScroll: 1,
         variableWidth: true,
         initialSlide: 0,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnHover: false,
+
         beforeChange: function (old, index) {
             setCurrentIndex(index);
         },

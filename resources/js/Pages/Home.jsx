@@ -1,6 +1,7 @@
 import Demo from "@/Components/Demo";
 import Hero from "@/Components/Home/Hero";
 import ProgramSlider from "@/Components/Home/ProgramSlider";
+import Subcribe from "@/Components/Subcribe";
 import { Button } from "@/Components/ui/button";
 import { Input } from "@/Components/ui/input";
 import MainLayout from "@/Layouts/MainLayout";
@@ -12,7 +13,7 @@ function Home() {
         <MainLayout>
             <Head title="Home" />
             <Hero />
-            <section className="container mt-[214px] mb-[120px] flex gap-[63px]">
+            <section className="container mt-[214px] mb-[120px] flex gap-[63px] relative">
                 <div className="w-1/2 pl-[120px]">
                     <div className="max-w-[528px]">
                         <div class=" text-black text-[32px] font-bold font-abhaya leading-[38.40px]">
@@ -47,7 +48,8 @@ function Home() {
                     Believe
                 </div>
             </section>
-            <section className="w-full pt-[123px] pb-[98px] mb-[161px] bg-[#280D4A]">
+            <ProgramSlider />
+            <section className="w-full mt-[141px] pt-[123px] pb-[98px] mb-[161px] bg-[#280D4A]">
                 <div className="container relative">
                     <div className="w-[70%]">
                         <img
@@ -74,8 +76,33 @@ function Home() {
                     <div className="absolute bg-[#280D4A]/40 w-full h-full top-0 left-0"></div>
                 </div>
             </section>
-            <ProgramSlider />
-            <section className="container flex flex-col">
+            <section className="w-full py-[109px]">
+                <div className="container flex  gap-[66px]">
+                    <div className="w-1/2 pl-[39px]">
+                        <img
+                            class="max-w-[599px] w-full rounded-[30px]"
+                            src="/images/event.png"
+                        />
+                    </div>
+                    <div className="w-1/2">
+                        <div class=" text-black text-[32px] font-normal font-abhaya leading-relaxed mt-[73px]">
+                            Upcoming Event
+                        </div>
+                        <div class=" text-[#280d4a] text-[70px] font-bold font-abhaya leading-[63px] my-[30px]">
+                            Healing and Prophetic
+                            <br />
+                            Streams
+                        </div>
+                        <div class="text-[#9a9a9a] text-2xl font-Gilroy font-medium leading-9 mt-6">
+                            25 August, 2024
+                        </div>
+                        <Button className="rounded-full text-base font-Gilroy font-semibold mt-9">
+                            Register now
+                        </Button>
+                    </div>
+                </div>
+            </section>
+            <section className="container flex flex-col bg-[#f9f9f9] mb-[158px]">
                 <h1 className="max-w-[962px] text-[260px] font-abhaya font-normal text-[#DEDEDE]">
                     Become
                 </h1>
@@ -105,54 +132,8 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <section className="w-full py-[109px] bg-[#f9f9f9]">
-                <div className="container flex  gap-[66px]">
-                    <div className="w-1/2 pl-[39px]">
-                        <img
-                            class="max-w-[599px] w-full rounded-[30px]"
-                            src="/images/event.png"
-                        />
-                    </div>
-                    <div className="w-1/2">
-                        <div class=" text-black text-[32px] font-normal font-abhaya leading-relaxed mt-[73px]">
-                            Upcoming Event
-                        </div>
-                        <div class=" text-[#280d4a] text-[70px] font-bold font-abhaya leading-[63px] my-[30px]">
-                            Healing and Prophetic
-                            <br />
-                            Streams
-                        </div>
-                        <div class="text-[#9a9a9a] text-2xl font-Gilroy font-medium leading-9 mt-6">
-                            25 August, 2024
-                        </div>
-                        <Button className="rounded-full text-base font-Gilroy font-semibold mt-9">
-                            Register now
-                        </Button>
-                    </div>
-                </div>
-            </section>
 
-            <section className="container mt-[77px] pb-[161px]">
-                <div class="mx-auto max-w-[900px] w-full px-8 py-12 bg-[#280d4a] rounded-2xl shadow-inner border border-[#2d2d44] ">
-                    <div class="self-stretch h-[65px] flex-col justify-start items-center flex">
-                        <div class="self-stretch text-center text-white text-[40px] font-bold font-abhaya leading-7">
-                            Stay Connected
-                        </div>
-                        <div class="self-stretch text-center text-[#828894] text-base font-medium font-inter leading-snug mt-[15px]">
-                            Latest news, tips, and freebies to your inbox.
-                        </div>
-                    </div>
-                    <div class="flex mx-auto max-w-[370px] w-full self-stretch p-[6px] bg-white rounded-[50px] mt-5">
-                        <Input
-                            placeholder="Enter your email"
-                            className="w-full border-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0 "
-                        />
-                        <Button className="rounded-full text-base font-semibold font-inter">
-                            Subscribe
-                        </Button>
-                    </div>
-                </div>
-            </section>
+            <Subcribe />
         </MainLayout>
     );
 }

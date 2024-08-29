@@ -20,6 +20,10 @@ export default {
             },
         },
         extend: {
+            gradients: {
+                "blue-purple":
+                    "41.76% 41.76% at 50% 50%, #095DFF 0%, rgba(191, 9, 255, 0.00) 100%",
+            },
             colors: {
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
@@ -64,6 +68,7 @@ export default {
                 inter: ["Inter"],
                 abhaya: ["Abhaya Libre"],
                 Gilroy: ["Gilroy", "sans-serif"],
+                outfit: ["Outfit"],
             },
             keyframes: {
                 "accordion-down": {
