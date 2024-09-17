@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-
 import Slider from "react-slick";
 
 const ProgramSlider = () => {
@@ -60,7 +59,6 @@ const ProgramSlider = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         variableWidth: true,
-        initialSlide: 0,
         autoplay: true,
         autoplaySpeed: 4000,
         pauseOnHover: false,
@@ -68,11 +66,29 @@ const ProgramSlider = () => {
         beforeChange: function (old, index) {
             setCurrentIndex(index);
         },
+
+        responsive: [
+            {
+                breakpoint: 1024, // Tablet and up
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+            {
+                breakpoint: 768, // Small tablet and mobile
+                settings: {
+                    slidesToShow: 1,
+                    variableWidth: false,
+                    centerMode: false,
+                    dots: false,
+                },
+            },
+        ],
     };
 
     return (
         <div className="w-full py-10">
-            <h2 className="text-center text-[#280d4a] font-abhaya text-[64px] font-bold mb-[52px]">
+            <h2 className="text-center text-[#280d4a] font-abhaya font-bold mb-[52px] lg:text-[48px] md:text-[40px] text-[32px]">
                 Our Programs
             </h2>
             <div className="slider-container relative">
@@ -85,7 +101,7 @@ const ProgramSlider = () => {
                     {programs.map((program, index) => (
                         <div
                             key={index}
-                            className={`w-full px-[60px] box-border transition-all duration-500 ease-in-out ${
+                            className={`w-full px-5 md:px-[60px] box-border transition-all duration-500 ease-in-out ${
                                 index === currentIndex
                                     ? "transform scale-100 opacity-100"
                                     : "transform scale-75 opacity-30"
@@ -95,17 +111,17 @@ const ProgramSlider = () => {
                                 <img
                                     src={program.image}
                                     alt={program.title}
-                                    className="w-full h-[617px] object-cover"
+                                    className="w-full h-[400px] md:h-[617px] object-cover"
                                 />
-                                <div className="absolute bottom-[72px]  right-8 bg-white pt-[58px] pb-[51px] pl-[41px] pr-[37px] rounded-lg shadow w-[444px]">
-                                    <div class="text-black text-[64px] font-bold font-abhaya leading-[51.20px]">
+                                <div className="absolute bottom-4 md:bottom-[72px] right-2  md:right-8 bg-white py-4 px-6 md:pt-20 md:pb-16 md:pl-14 md:pr-12 lg:pt-24 lg:pb-20 lg:pl-16 lg:pr-14 rounded-lg shadow w-full md:w-[444px] ">
+                                    <div className="text-black text-[32px] font-bold font-abhaya leading-[51.20px] lg:text-[48px] md:text-[40px]">
                                         {program.title}
                                     </div>
 
-                                    <p className="max-w-[366px] text-black text-base font-normal font-inter leading-normal mt-2">
+                                    <p className="max-w-[366px] text-black text-base font-normal font-inter leading-normal mt-1 md:mt-2 lg:max-w-[300px] md:max-w-[280px] sm:max-w-[240px] sm:text-sm">
                                         {program.description}
                                     </p>
-                                    <p className="text-black text-xl font-bold font-gilroyBold leading-[30px] mt-[14px]">
+                                    <p className="text-black text-xl font-bold font-gilroyBold leading-[30px] mt-4 md:mt-[14px] lg:text-lg md:text-base sm:text-sm">
                                         {program.time}
                                     </p>
                                 </div>
@@ -113,7 +129,7 @@ const ProgramSlider = () => {
                             {index === currentIndex && (
                                 <>
                                     <button
-                                        className="absolute top-1/2 transform -translate-y-1/2 -left-[102px] bg-white/75 rounded-full w-[102px] h-[102px] flex items-center justify-center shadow border-2 border-[#3C3C3C] z-10"
+                                        className="hidden absolute top-1/2 transform -translate-y-1/2 -left-[102px] bg-white/75 rounded-full w-[102px] h-[102px] lg:flex items-center justify-center shadow border-2 border-[#3C3C3C] z-10 md:w-[80px] md:h-[80px] sm:w-[60px] sm:h-[60px]"
                                         onClick={prevSlide}
                                     >
                                         <svg
@@ -121,7 +137,7 @@ const ProgramSlider = () => {
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
-                                            className="w-10 h-10"
+                                            className="w-10 h-10 md:w-8 md:h-8 sm:w-6 sm:h-6"
                                         >
                                             <path
                                                 strokeLinecap="round"
@@ -132,7 +148,7 @@ const ProgramSlider = () => {
                                         </svg>
                                     </button>
                                     <button
-                                        className="absolute top-1/2 transform -translate-y-1/2 -right-[102px] bg-white/75 rounded-full w-[102px] h-[102px] flex items-center justify-center shadow border-2 border-[#3C3C3C] z-10"
+                                        className="absolute top-1/2 transform -translate-y-1/2 -right-[102px] bg-white/75 rounded-full w-[102px] h-[102px] hidden lg:flex items-center justify-center shadow border-2 border-[#3C3C3C] z-10 md:w-[80px] md:h-[80px] sm:w-[60px] sm:h-[60px]"
                                         onClick={nextSlide}
                                     >
                                         <svg
@@ -140,7 +156,7 @@ const ProgramSlider = () => {
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
-                                            className="w-10 h-10"
+                                            className="w-10 h-10 md:w-8 md:h-8 sm:w-6 sm:h-6"
                                         >
                                             <path
                                                 strokeLinecap="round"
@@ -156,85 +172,6 @@ const ProgramSlider = () => {
                     ))}
                 </Slider>
             </div>
-            {/* <div className="relative overflow-hidden w-full mt-[52px]">
-                <div
-                    className="flex transition-transform duration-500 ease-in-out"
-                    style={updateSliderPosition()}
-                >
-                    {programs.map((program, index) => (
-                        <div
-                            key={index}
-                            className={`flex-none w-[70%] px-[90px] box-border transition-all duration-500 ease-in-out ${
-                                index === currentIndex
-                                    ? "transform scale-100 opacity-100"
-                                    : "transform scale-90 opacity-50"
-                            }`}
-                        >
-                            <div className="relative bg-white rounded-[30px] overflow-hidden shadow-lg">
-                                <img
-                                    src={program.image}
-                                    alt={program.title}
-                                    className="w-full h-[617px] object-cover"
-                                />
-                                <div className="absolute bottom-[72px]  right-8 bg-white pt-[58px] pb-[51px] pl-[41px] pr-[37px] rounded-lg shadow w-[444px]">
-                                    <div class="text-black text-[64px] font-bold font-abhaya leading-[51.20px]">
-                                        {program.title}
-                                    </div>
-
-                                    <p className="max-w-[366px] text-black text-base font-normal font-inter leading-normal mt-2">
-                                        {program.description}
-                                    </p>
-                                    <p className="text-black text-xl font-bold font-gilroyBold leading-[30px] mt-[14px]">
-                                        {program.time}
-                                    </p>
-                                </div>
-                            </div>
-                            {index === currentIndex && (
-                                <>
-                                    <button
-                                        className="absolute top-1/2 transform -translate-y-1/2 left-10 bg-white/75 rounded-full w-[102px] h-[102px] flex items-center justify-center shadow border-2 border-[#3C3C3C] z-10"
-                                        onClick={prevSlide}
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            className="w-10 h-10"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth="2"
-                                                d="M15 19l-7-7 7-7"
-                                            />
-                                        </svg>
-                                    </button>
-                                    <button
-                                        className="absolute top-1/2 transform -translate-y-1/2 -right-[20px] bg-white/75 rounded-full w-[102px] h-[102px] flex items-center justify-center shadow border-2 border-[#3C3C3C] z-10"
-                                        onClick={nextSlide}
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            className="w-10 h-10"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth="2"
-                                                d="M9 5l7 7-7 7"
-                                            />
-                                        </svg>
-                                    </button>
-                                </>
-                            )}
-                        </div>
-                    ))}
-                </div>
-            </div> */}
         </div>
     );
 };

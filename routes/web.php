@@ -17,8 +17,16 @@ Route::get('/store', function () {
     return Inertia::render('Store');
 });
 
+Route::get('/programmes', function () {
+    return Inertia::render('Programmes');
+});
+
 Route::get('/contact', function () {
     return Inertia::render('Contact');
+});
+
+Route::get('/partnership', function () {
+    return Inertia::render('Partnership');
 });
 
 

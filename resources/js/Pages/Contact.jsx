@@ -11,15 +11,14 @@ function Contact() {
     return (
         <MainLayout>
             <Head title="Contact" />
-            <section className="relative w-full flex flex-col pt-[178px] pb-[119px]">
-                <Navbar />
-
-                <div className="max-w-[1080px] w-full mx-auto  flex gap-[116px] justify-center">
+            <Navbar />
+            <section className="container relative w-full flex flex-col pt-[178px] pb-[119px]">
+                <div className="max-w-[1080px] w-full mx-auto  flex flex-col md:flex-row gap-[70px] lg:gap-[116px] justify-center">
                     <div className="flex flex-col justify-center">
-                        <div className=" text-black text-[64px] font-bold font-abhaya leading-[57.60px]">
+                        <div className=" text-black  md:text-[64px] font-bold font-abhaya leading-[57.60px]">
                             Get in touch
                         </div>
-                        <div className="max-w-[504px] text-black text-base font-normal font-inter mt-[18px] leading-normal">
+                        <div className=" w-full md:max-w-[504px] text-black text-base font-normal font-inter mt-[18px] leading-normal">
                             We'd love to hear from you! Whether you have a
                             question, need prayer, or just want to learn more
                             about our church, we're here to help. Reach out to
@@ -27,7 +26,7 @@ function Contact() {
                             back to you as soon as possible.
                         </div>
                     </div>
-                    <div className="max-w-[460px] w-full px-7 py-10 rounded-[30px] bg-white shadow z-10 flex flex-col">
+                    <div className="md:max-w-[460px] w-full px-7 py-10 rounded-[30px] bg-white shadow z-10 flex flex-col">
                         <div className="flex flex-col gap-2">
                             <Input
                                 placeholder="Full Name"
@@ -59,15 +58,15 @@ function Contact() {
                     className="absolute -top-[458px] -right-[535px] w-[1155px] h-[1155px]"
                 />
             </section>
-            <section className="max-w-[1080px] w-full h-[527px] mx-auto flex items-center relative mb-[172px]">
-                <div className="max-w-[353px] w-full bg-[#df6426] rounded-[30px] flex flex-col items-center justify-center gap-8 p-10 z-10">
-                    <div className="w-[255px] h-[72px] bg-white rounded-2xl flex items-center px-6 gap-3">
+            <section className="container max-w-[1080px] w-full h-[527px] mx-auto flex items-center relative mb-[172px]">
+                <div className="md:max-w-[353px] w-full bg-[#df6426] rounded-[30px] flex flex-col items-center justify-center gap-8 p-10 z-10">
+                    <div className="w-full md:w-[255px] h-[72px] bg-white rounded-2xl flex items-center px-6 gap-3">
                         <img src="/images/contact/email.png" alt="" srcset="" />
                         <div className="text-black text-lg font-normal font-inter leading-[27px]">
                             info@rcnlondon.uk
                         </div>
                     </div>
-                    <div className="w-[255px] h-[72px] bg-white rounded-2xl flex items-center px-6 gap-3">
+                    <div className="w-full md:w-[255px] h-[72px] bg-white rounded-2xl flex items-center px-6 gap-3">
                         <img
                             src="/images/contact/whatsapp.png"
                             alt=""
@@ -77,7 +76,7 @@ function Contact() {
                             +447563305204
                         </div>
                     </div>
-                    <div className="w-[255px] flex gap-3 ">
+                    <div className="w-full md:w-[255px] flex gap-3 ">
                         <img
                             src="/images/contact/location.png"
                             className="w-[32.46px] h-[37.50px]"
