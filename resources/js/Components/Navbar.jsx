@@ -18,33 +18,40 @@ function Navbar() {
         {
             name: "Home",
             link: "/",
+            active: route().current("home"),
         },
         {
             name: "About",
             link: "/about",
+            active: route().current("about"),
         },
 
         {
             name: "Programmes",
             link: "/programmes",
+            active: route().current("programmes"),
         },
 
         {
             name: "Community",
-            link: "/community",
+            link: "/community/events",
+            active: route().current("community**"),
         },
         {
             name: "Store",
             link: "/store",
+            active: route().current("store"),
         },
 
         {
             name: "Partnership",
             link: "/partnership",
+            active: route().current("partnership"),
         },
         {
             name: "Contact Us",
             link: "/contact",
+            active: route().current("contact"),
         },
     ];
     return (
@@ -60,8 +67,10 @@ function Navbar() {
                 {LinkItems.map((item) => (
                     <Link
                         href={item.link}
-                        className={`text-lg font-Gilroy font-semibold leading-[27px] hover:text-gray-900 ${
-                            url == item.link ? "text-[#FF9B54]" : "text-black"
+                        className={`text-lg font-Gilroy leading-[27px] hover:text-gray-900 ${
+                            item.active
+                                ? "text-black font-black"
+                                : "text-black/90 font-semibold"
                         }`}
                     >
                         {item.name}
@@ -83,10 +92,10 @@ function Navbar() {
                                 {LinkItems.map((item) => (
                                     <Link
                                         href={item.link}
-                                        className={`text-lg font-Gilroy font-semibold leading-[27px] hover:text-gray-900 ${
+                                        className={`text-lg font-Gilroy leading-[27px] hover:text-gray-900 ${
                                             url == item.link
-                                                ? "text-[#FF9B54]"
-                                                : "text-black"
+                                                ? "text-black font-bold"
+                                                : "text-black font-semibold"
                                         }`}
                                     >
                                         {item.name}

@@ -2,7 +2,7 @@ import React from "react";
 
 const RenewedCard = () => {
     return (
-        <div className="relative w-full  lg:w-[60%] rounded-lg overflow-hidden flex flex-col lg:justify-between z-10 ">
+        <div className="relative w-full rounded-lg overflow-hidden flex flex-col lg:justify-between z-10 ">
             <div className="text-[#280d4a] text-[64px] sm:text-[80px] md:text-[120px] lg:text-[160px] font-normal font-abhaya leading-[64px] sm:leading-[80px] md:leading-[120px] lg:leading-[175.20px]">
                 Renewed
             </div>
@@ -17,7 +17,7 @@ const RenewedCard = () => {
                 </div>
             </div>
 
-            <div className="flex justify-center -space-x-10 sm:-space-x-14 md:-space-x-20">
+            <div className="flex -space-x-10 sm:-space-x-14 md:-space-x-20">
                 <div className="w-[120px] sm:w-[180px] md:w-[240px] lg:w-[287px] h-[120px] sm:h-[180px] md:h-[240px] lg:h-[287px] rounded-full overflow-hidden border-white border-[8px] md:border-[11px] z-10">
                     <img
                         src="/images/hero/renewed-23.png"

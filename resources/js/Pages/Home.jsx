@@ -1,6 +1,7 @@
 import Demo from "@/Components/Demo";
 import Hero from "@/Components/Home/Hero";
 import ProgramSlider from "@/Components/Home/ProgramSlider";
+import Navbar from "@/Components/Navbar";
 import Subcribe from "@/Components/Subcribe";
 import { Button } from "@/Components/ui/button";
 import { Input } from "@/Components/ui/input";
@@ -12,11 +13,12 @@ function Home() {
     return (
         <MainLayout>
             <Head title="Home" />
+            <Navbar />
             <Hero />
-            <section className="container mt-[100px] mb-[80px] md:mt-[150px] md:mb-[120px] flex flex-col-reverse lg:flex-row gap-[20px] md:gap-[63px] relative">
-                <div className="w-full lg:w-1/2  lg:pl-[120px]">
-                    <div className="max-w-full lg:max-w-[528px]">
-                        <div class="text-black text-[24px] sm:text-[28px] md:text-[32px] font-bold font-abhaya leading-[30px] sm:leading-[35px] md:leading-[38.40px]">
+            <section className="container mb-[80px] md:mt-[150px] md:mb-[120px]  relative">
+                <div className="max-w-[1080px] mx-auto flex flex-col-reverse lg:flex-row gap-[20px] md:gap-[63px]">
+                    <div className="w-full lg:w-1/2">
+                        <div className="w-[528px] text-black text-[32px] font-bold font-abhaya leading-[38.40px]">
                             Every believer is meant to be part of a community.
                             God's intention was never for us to navigate life
                             alone.
@@ -37,12 +39,12 @@ function Home() {
                             </Button>
                         </div>
                     </div>
-                </div>
-                <div className="w-full lg:w-1/2">
-                    <img
-                        src="/images/believe.png"
-                        className="w-full max-w-full lg:max-w-[599px] h-auto"
-                    />
+                    <div className="w-full lg:w-1/2 rounded-[30px] overflow-hidden">
+                        <img
+                            src="/images/believe.png"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
                 </div>
                 <div class="absolute text-[#dddddd] text-[100px] md:text-[200px] font-normal font-abhaya leading-[150px] sm:leading-[200px] md:leading-[240px] left-[10px] sm:left-[32px] -top-[12rem] sm:-top-[15rem] md:-top-[19rem]">
                     Believe
@@ -105,7 +107,7 @@ function Home() {
                 </div>
             </section>
 
-            <section className="container flex flex-col bg-[#f9f9f9] mb-[100px] sm:mb-[120px] md:mb-[140px] lg:mb-[158px]">
+            <section className="px-8 flex flex-col bg-[#f9f9f9] mb-[100px] sm:mb-[120px] md:mb-[140px] lg:mb-[158px]">
                 <h1 className="max-w-full text-[100px] sm:text-[160px] md:text-[220px] lg:text-[260px] font-abhaya font-normal text-[#DEDEDE]">
                     Become
                 </h1>
@@ -113,17 +115,22 @@ function Home() {
                     <div className="w-full lg:w-1/2 lg:pl-[120px]">
                         <div className="w-full lg:max-w-[528px]">
                             <div className="text-black text-[24px] sm:text-[28px] md:text-[32px] font-bold font-abhaya leading-[30px] sm:leading-[34px] md:leading-[38.40px]">
-                                Urna diam luctus platea platea aliquet amet
-                                elementum. Praesent lectus luctus auctor velit
-                                urna a sagittis.
+                                As we believe and belong, we are also called to
+                                become all that God has destined us to be.
                             </div>
                             <div className="text-black text-sm sm:text-base font-normal font-inter leading-normal mt-[20px] sm:mt-[25px] md:mt-[30px] mb-5 sm:mb-6 md:mb-7">
-                                Ipsum mus orci justo nunc odio. Sit sagittis in
-                                ac sem mi faucibus. Faucibus id est sed molestie
-                                lacus nibh auctor fringilla. Vestibulum
-                                tristique ornare morbi egestas placerat mauris.
-                                Integer odio vivamus lacus nibh at at senectus
-                                faucibus.
+                                Our journey doesn’t end at salvation; it
+                                continues as we grow in the knowledge of Christ
+                                and are transformed into His likeness. At RCN
+                                London, we are committed to equipping every
+                                believer to become a mature disciple of Christ,
+                                fully equipped for every good work.
+                                <br />
+                                <br />
+                                Through discipleship, mentoring, and a life
+                                rooted in the Word, we encourage each person to
+                                rise to their God-given potential, becoming a
+                                vessel of honour in the service of our Lord.
                             </div>
                         </div>
                     </div>

@@ -33,8 +33,8 @@ function About() {
                 />
 
                 {/* Text Content */}
-                <div className="max-w-[1080px] w-full mx-auto flex items-center h-full">
-                    <div className="w-full md:w-[650px] text-black text-[28px] sm:text-[48px] md:text-[64px] font-bold font-abhaya leading-[36px] sm:leading-[58px] md:leading-[70.40px] px-4 sm:px-0">
+                <div className="container max-w-[1080px] mx-auto flex items-center h-full">
+                    <div className="w-full md:w-[650px] text-black text-[28px] sm:text-[48px] md:text-[64px] font-bold font-abhaya leading-[36px] sm:leading-[58px] md:leading-[70.40px]">
                         We are a people helped by God, united by His grace, and
                         strengthened by His love.
                     </div>
@@ -43,7 +43,14 @@ function About() {
             <section className="container pb-[100px] lg:hidden">
                 <div className="w-full flex flex-wrap gap-[40px] mt-[40px]">
                     <div className="w-full">
-                        <div className="w-full bg-[#836BC1] rounded-[22px] h-[300px] sm:h-[361px] mb-4" />
+                        <div className="w-full bg-[#836BC1] rounded-[22px] h-[300px] sm:h-[361px] mb-4">
+                            <img
+                                src="images/about/values.png"
+                                alt=""
+                                srcset=""
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
                         <h1 className="text-base uppercase font-medium font-abhaya text-[#161722]">
                             OUR VALUES
                         </h1>
@@ -59,7 +66,13 @@ function About() {
                     </div>
 
                     <div className="w-full">
-                        <div className="w-full  bg-[#836BC1] rounded-[22px] sm:rounded-[32px] h-[300px] sm:h-[361px] mb-4" />
+                        <div className="w-full  bg-[#836BC1] rounded-[22px] sm:rounded-[32px] h-[300px] sm:h-[361px] mb-4">
+                            <img
+                                src="images/about/mission.png"
+                                alt=""
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
                         <div className="flex flex-col">
                             <h1 className="text-base uppercase font-medium font-abhaya text-[#161722]">
                                 OUR VISION
@@ -75,7 +88,13 @@ function About() {
                         </div>
                     </div>
                     <div className="w-full">
-                        <div className="w-full bg-[#836BC1] rounded-[22px] sm:rounded-[32px] h-[300px] mb-4" />
+                        <div className="w-full  bg-[#836BC1] rounded-[22px] sm:rounded-[32px] h-[300px] sm:h-[361px] mb-4">
+                            <img
+                                src="images/about/mission2.png"
+                                alt=""
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
                         <div className="flex flex-col">
                             <h1 className="text-base uppercase font-medium font-abhaya text-[#161722]">
                                 OUR VISION
@@ -94,9 +113,27 @@ function About() {
             </section>
             <section className="hidden lg:block container pb-[154px]">
                 <div className="w-full max-w-[1080px] mx-auto  flex items-center space-x-[25px] ">
-                    <div className="w-[30%] bg-[#836BC1] rounded-[30px] h-[271px]"></div>
-                    <div className="w-[40%] bg-[#836BC1] rounded-[32px] h-[361px]"></div>
-                    <div className="w-[30%] bg-[#836BC1] rounded-[30px] h-[271px]"></div>
+                    <div className="w-[30%] bg-[#836BC1] rounded-[30px] h-[271px]">
+                        <img
+                            src="images/about/values.png"
+                            alt=""
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div className="w-[40%] bg-[#836BC1] rounded-[32px] h-[361px]">
+                        <img
+                            src="images/about/mission.png"
+                            alt=""
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div className="w-[30%] bg-[#836BC1] rounded-[30px] h-[271px]">
+                        <img
+                            src="images/about/mission2.png"
+                            alt=""
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
                 </div>
                 <div className="w-full max-w-[1080px] mx-auto flex space-x-[25px] mt-[51px]">
                     <div className="w-[30%]">
@@ -144,15 +181,17 @@ function About() {
                     </div>
                 </div>
             </section>
-            <section className="w-full bg-[#bf0987] h-[400px] sm:h-[500px] md:h-[634px] flex items-center justify-center relative">
-                <div className="max-w-[90%] md:max-w-[827px] text-center text-white text-[28px] sm:text-[40px] md:text-[50px] font-bold font-abhaya leading-[36px] sm:leading-[48px] md:leading-[60px] px-4">
-                    Transforming worldly systems and nurturing ministers with
-                    the knowledge and strength to lead with purpose.
+            <section className="w-full bg-[#bf0987] ">
+                <div className="container max-w-[1080px] mx-auto h-[400px] sm:h-[500px] md:h-[634px] flex items-center justify-center relative">
+                    <div className="max-w-[90%] md:max-w-[827px] text-center text-white text-[28px] sm:text-[40px] md:text-[50px] font-bold font-abhaya leading-[36px] sm:leading-[48px] md:leading-[60px] px-4">
+                        Transforming worldly systems and nurturing ministers
+                        with the knowledge and strength to lead with purpose.
+                    </div>
+                    <img
+                        className="w-[220px] h-[120px] sm:w-[350px] sm:h-[180px] md:w-[477px] md:h-[254px] rounded-[15px] sm:rounded-[18px] md:rounded-[20px] absolute -bottom-[50px] sm:-bottom-[70px] md:-bottom-[88px] right-0"
+                        src="/images/about/transform.png"
+                    />
                 </div>
-                <img
-                    className="w-[220px] h-[120px] sm:w-[350px] sm:h-[180px] md:w-[477px] md:h-[254px] rounded-[15px] sm:rounded-[18px] md:rounded-[20px] absolute -bottom-[50px] sm:-bottom-[70px] md:-bottom-[88px] right-[50px] sm:right-[150px] md:right-[244px]"
-                    src="/images/about/transform.png"
-                />
             </section>
 
             <section className="pt-[100px] sm:pt-[150px] pb-[80px] sm:pb-[120px] max-w-[1080px] mx-auto">
@@ -165,65 +204,109 @@ function About() {
                     </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-y-12 sm:gap-x-[30px] md:gap-x-[82px] mx-auto justify-center mt-[50px] sm:mt-[60px] md:mt-[74px]">
-                    {[...Array(3)].map((_, index) => (
-                        <div className="flex flex-col items-center" key={index}>
-                            <div className="w-[150px] h-[150px] sm:w-[175px] sm:h-[175px] md:w-[225px] md:h-[225px] bg-[#836bc1] rounded-full" />
-                            <div className="text-black text-[22px] sm:text-[24px] md:text-[28px] font-normal font-abhaya leading-[26px] sm:leading-[30px] md:leading-[33.60px] mt-[20px] sm:mt-[35px] md:mt-[47px]">
-                                Apostle
-                            </div>
-                            <div className="text-black text-[26px] sm:text-[28px] md:text-[32px] font-extrabold font-abhaya leading-[32px] sm:leading-[34px] md:leading-[38.40px]">
-                                Arome Osayi
-                            </div>
+                    <div className="flex flex-col items-center">
+                        <div className="w-[150px] h-[150px] sm:w-[175px] sm:h-[175px] md:w-[225px] md:h-[225px] bg-[#836bc1] rounded-full overflow-hidden">
+                            <img
+                                src="/images/about/apostle.png"
+                                className="w-full h-full object-cover"
+                                alt=""
+                            />
                         </div>
-                    ))}
+                        <div className="text-black text-[22px] sm:text-[24px] md:text-[28px] font-normal font-abhaya leading-[26px] sm:leading-[30px] md:leading-[33.60px] mt-[20px] sm:mt-[35px] md:mt-[47px]">
+                            Apostle
+                        </div>
+                        <div className="text-black text-[26px] sm:text-[28px] md:text-[32px] font-extrabold font-abhaya leading-[32px] sm:leading-[34px] md:leading-[38.40px]">
+                            Arome Osayi
+                        </div>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <div className="w-[150px] h-[150px] sm:w-[175px] sm:h-[175px] md:w-[225px] md:h-[225px] bg-[#836bc1] rounded-full overflow-hidden">
+                            <img
+                                src="/images/about/pastor.png"
+                                className="w-full h-full object-cover"
+                                alt=""
+                            />
+                        </div>
+                        <div className="text-black text-[22px] sm:text-[24px] md:text-[28px] font-normal font-abhaya leading-[26px] sm:leading-[30px] md:leading-[33.60px] mt-[20px] sm:mt-[35px] md:mt-[47px]">
+                            Apostle
+                        </div>
+                        <div className="text-black text-[26px] sm:text-[28px] md:text-[32px] font-extrabold font-abhaya leading-[32px] sm:leading-[34px] md:leading-[38.40px]">
+                            Henry Ajiri-Evans
+                        </div>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <div className="w-[150px] h-[150px] sm:w-[175px] sm:h-[175px] md:w-[225px] md:h-[225px] bg-[#836bc1] rounded-full overflow-hidden">
+                            <img
+                                src="/images/about/pastor2.png"
+                                className="w-full h-full object-cover"
+                                alt=""
+                            />
+                        </div>
+                        <div className="text-black text-[22px] sm:text-[24px] md:text-[28px] font-normal font-abhaya leading-[26px] sm:leading-[30px] md:leading-[33.60px] mt-[20px] sm:mt-[35px] md:mt-[47px]">
+                            Apostle
+                        </div>
+                        <div className="text-black text-[26px] sm:text-[28px] md:text-[32px] font-extrabold font-abhaya leading-[32px] sm:leading-[34px] md:leading-[38.40px]">
+                            Laura Ajiri-Evans
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section className="container bg-[#836bc1]/20 pt-[80px] sm:pt-[100px] md:pt-[110px] pb-[90px] sm:pb-[100px] md:pb-[121px]">
-                <div className="text-[#d2c6e1] text-[100px]  md:text-[200px] font-normal font-abhaya leading-[80px]  md:leading-[160px] md:ml-[60px]">
-                    Who we are
-                </div>
-
-                <div className="max-w-[1080px] mx-auto relative mt-[40px] sm:mt-[60px] md:mt-[72px]">
-                    <div className="max-w-full md:max-w-[619px] text-black text-base font-normal font-inter leading-normal">
-                        Remnant Christian Network (RCN) is a non-denominational
-                        ministry headquartered in Makurdi, Benue State, Nigeria,
-                        with apostolic centers and mission outreaches across
-                        Africa, North America, and Europe.
+            <section className=" bg-[#836bc1]/20 w-full">
+                <div className="container pt-[80px] sm:pt-[100px] md:pt-[110px] pb-[90px] sm:pb-[100px] md:pb-[121px]">
+                    <div className="text-[#d2c6e1] text-[100px]  md:text-[200px] font-normal font-abhaya leading-[80px]  md:leading-[160px]">
+                        Who we are
                     </div>
 
-                    <div className="max-w-full md:max-w-[619px] text-black text-base font-normal font-inter leading-normal mt-4">
-                        RCN is singularly focused on restoring the prayer
-                        commission of the Church, in fulfillment of Jesus’
-                        proclamation in Matthew 21:13: “My house shall be called
-                        a house of prayer.” As an apostolic movement, we aim to
-                        challenge worldly systems and raise up capable ministers
-                        from among Nigeria’s youth. These ministers will carry
-                        the gospel to every corner of the earth, fulfilling the
-                        divine mandate for the last apostolic dispensation, as
-                        revealed by the ancients: "Nigeria is the trigger."
+                    <div className="max-w-[1080px] mx-auto relative mt-[40px] sm:mt-[60px] md:mt-[72px]">
+                        <div className="max-w-full md:max-w-[619px] text-black text-base font-normal font-inter leading-normal">
+                            Remnant Christian Network (RCN) is a
+                            non-denominational ministry headquartered in
+                            Makurdi, Benue State, Nigeria, with apostolic
+                            centers and mission outreaches across Africa, North
+                            America, and Europe.
+                        </div>
+
+                        <div className="max-w-full md:max-w-[619px] text-black text-base font-normal font-inter leading-normal mt-4">
+                            RCN is singularly focused on restoring the prayer
+                            commission of the Church, in fulfillment of Jesus’
+                            proclamation in Matthew 21:13: “My house shall be
+                            called a house of prayer.” As an apostolic movement,
+                            we aim to challenge worldly systems and raise up
+                            capable ministers from among Nigeria’s youth. These
+                            ministers will carry the gospel to every corner of
+                            the earth, fulfilling the divine mandate for the
+                            last apostolic dispensation, as revealed by the
+                            ancients: "Nigeria is the trigger."
+                        </div>
+
+                        <div className="hidden lg:flex absolute w-[180px] sm:w-[250px] md:w-[351px] h-[120px] sm:h-[180px] md:h-[221px] bg-[#836bc1] rounded-[20px] right-0 -bottom-[60px] sm:-bottom-[80px] md:-bottom-[100px]">
+                            <img
+                                src="/images/about/who.png"
+                                className="w-full h-full object-cover"
+                                alt=""
+                            />
+                        </div>
                     </div>
 
-                    <div className="hidden lg:flex absolute w-[180px] sm:w-[250px] md:w-[351px] h-[120px] sm:h-[180px] md:h-[221px] bg-[#836bc1] rounded-[20px] right-0 -bottom-[60px] sm:-bottom-[80px] md:-bottom-[100px]" />
-                </div>
+                    <div className="w-full md:max-w-[707px] text-black text-[26px] sm:text-[30px] md:text-[34px] font-bold font-abhaya leading-[32px] sm:leading-[36px] md:leading-[40.80px] mx-auto mt-[120px] sm:mt-[150px] md:mt-[191px]">
+                        If the glory of the Lord is to fill the earth as the
+                        waters cover the sea, and if revival must precede the
+                        second coming of the Lord, then men must watch, pray,
+                        and spread the good news. This is RCN’s mandate: to
+                        raise intercessors, prophets, evangelists, and teachers.
+                    </div>
 
-                <div className="w-full md:max-w-[707px] text-black text-[26px] sm:text-[30px] md:text-[34px] font-bold font-abhaya leading-[32px] sm:leading-[36px] md:leading-[40.80px] mx-auto mt-[120px] sm:mt-[150px] md:mt-[191px]">
-                    If the glory of the Lord is to fill the earth as the waters
-                    cover the sea, and if revival must precede the second coming
-                    of the Lord, then men must watch, pray, and spread the good
-                    news. This is RCN’s mandate: to raise intercessors,
-                    prophets, evangelists, and teachers.
-                </div>
-
-                <div className="max-w-[100%] sm:max-w-[600px] md:max-w-[825px] w-full h-[250px] sm:h-[350px] md:h-[418px] bg-black/40 rounded-[20px] sm:rounded-[25px] md:rounded-[30px] mx-auto overflow-hidden mt-[60px] sm:mt-[70px] md:mt-[86px]">
-                    <img
-                        src="/images/about/rename.png"
-                        className="w-full h-full object-cover"
-                    />
+                    <div className="max-w-full md:max-w-[825px] w-full h-[250px] sm:h-[350px] md:h-[418px] bg-black/40 rounded-[20px] sm:rounded-[25px] md:rounded-[30px] mx-auto overflow-hidden mt-[60px] sm:mt-[70px] md:mt-[86px]">
+                        <img
+                            src="/images/about/rename.png"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
                 </div>
             </section>
 
-            <section className="container md:max-w-[1080px] mx-auto pt-[80px] sm:pt-[100px] md:pt-[128px] flex flex-col md:flex-row items-center gap-x-[20px] md:gap-x-[40px] lg:gap-x-[91px] mb-[100px] sm:mb-[150px] md:mb-[226px]">
+            <section className="container max-w-[1080px] mx-auto pt-[80px] sm:pt-[100px] md:pt-[128px] flex flex-col md:flex-row items-center gap-x-[20px] md:gap-x-[40px] lg:gap-x-[91px] mb-[100px] sm:mb-[150px] md:mb-[226px]">
                 <div className="w-full md:max-w-[351px] h-[300px] sm:h-[400px] md:h-[485px] bg-[#836bc1] rounded-[20px] mx-auto" />
 
                 <div className="flex flex-col mt-[30px]  md:mt-0">

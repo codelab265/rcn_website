@@ -5,7 +5,6 @@ import RenewedCard from "./RenewedCard";
 function Hero() {
     return (
         <section className="w-full relative h-[500px] sm:h-[700px] md:h-[900px] lg:h-[1157px] overflow-hidden bg-white">
-            <Navbar />
             <img
                 src="/images/hero/vector.png "
                 className="absolute w-full -top-[47px] md:-top-[57px] lg:-top-[67px] lg:-right-[111px] bottom-0 "
@@ -18,7 +17,7 @@ function Hero() {
                 src="/images/hero/pastor.png"
                 className="absolute mix-blend-overlay -right-[66px] top-[67px] "
             />
-            <div className="absolute container h-full left-0 top-0 right-0 flex items-center md:pl-[110px]">
+            <div className="absolute container h-full left-0 top-0 right-0 flex items-center max-w-[1080px]">
                 <RenewedCard />
             </div>
             <div className="absolute top-[63px] right-[357px] w-[11px] h-[11px] bg-white rounded-full" />
