@@ -43,7 +43,7 @@ function About() {
             <section className="container pb-[100px] lg:hidden">
                 <div className="w-full flex flex-wrap gap-[40px] mt-[40px]">
                     <div className="w-full">
-                        <div className="w-full bg-[#836BC1] rounded-[22px] h-[300px] sm:h-[361px] mb-4">
+                        <div className="w-full bg-[#836BC1] rounded-[30px] overflow-hidden h-[300px] sm:h-[361px] mb-4">
                             <img
                                 src="images/about/values.png"
                                 alt=""
@@ -66,7 +66,7 @@ function About() {
                     </div>
 
                     <div className="w-full">
-                        <div className="w-full  bg-[#836BC1] rounded-[22px] sm:rounded-[32px] h-[300px] sm:h-[361px] mb-4">
+                        <div className="w-full  bg-[#836BC1] rounded-[30px] overflow-hidden h-[300px] sm:h-[361px] mb-4">
                             <img
                                 src="images/about/mission.png"
                                 alt=""
@@ -88,7 +88,7 @@ function About() {
                         </div>
                     </div>
                     <div className="w-full">
-                        <div className="w-full  bg-[#836BC1] rounded-[22px] sm:rounded-[32px] h-[300px] sm:h-[361px] mb-4">
+                        <div className="w-full  bg-[#836BC1] rounded-[30px] h-[300px] sm:h-[361px] mb-4 overflow-hidden">
                             <img
                                 src="images/about/mission2.png"
                                 alt=""
@@ -333,6 +333,36 @@ function About() {
                         <Button className="rounded-full font-Gilroy px-4 py-2 sm:px-6 sm:py-3 md:px-5 md:py-2.5">
                             Become Member
                         </Button>
+                    </div>
+                </div>
+            </section>
+
+            <section className="w-full bg-[#1e1767] py-[90px] mb-[78px]">
+                <div className="container relative md:pt-[177px]">
+                    <div className="text-[#c8c6e1]/20  text-[80px] md:text-[200px] font-normal font-abhaya leading-none md:leading-[160px] md:absolute top-0 left-0 mb-[57px] md:mb-0">
+                        Statement <br />
+                        of Faith
+                    </div>
+                    <div className="max-w-[1080px] mx-auto flex gap-[20px] md:gap-[57px] flex-col-reverse md:flex-row">
+                        <div className="w-full md:w-1/2 flex flex-col justify-end pb-[61px]">
+                            <div className="md:w-[514px] text-white text-base font-normal font-inter leading-normal">
+                                We are guided by a steadfast commitment to
+                                biblical truths and principles. Our Statement of
+                                Faith reflects the core beliefs that define our
+                                mission and community.
+                            </div>
+                            <div className="">
+                                <Button className="rounded-full h-[51px] p-5 bg-white text-black text-base font-Gilroy font-semibold mt-9 hover:text-white">
+                                    Download Our Statement of Faith
+                                </Button>
+                            </div>
+                        </div>
+                        <div className="w-full md:w-1/2">
+                            <img
+                                src="/images/about/statement.png"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
