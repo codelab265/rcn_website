@@ -11,6 +11,9 @@ function Map() {
     return (
         <div className="max-w-[809px] w-full h-[527px] bg-black/5 rounded-[30px] overflow-hidden absolute top-0 right-0">
             <GoogleMapReact
+                bootstrapURLKeys={{
+                    key: "AIzaSyBDrEKsKkMuBMwUEGFjj4UVLMr5-2gsbls",
+                }}
                 defaultCenter={location}
                 defaultZoom={17}
             ></GoogleMapReact>
