@@ -6,7 +6,7 @@ import Subcribe from "@/Components/Subcribe";
 import { Button } from "@/Components/ui/button";
 import { Input } from "@/Components/ui/input";
 import MainLayout from "@/Layouts/MainLayout";
-import { Head } from "@inertiajs/react";
+import { Head, Link } from "@inertiajs/react";
 import React from "react";
 
 function Home() {
@@ -15,7 +15,10 @@ function Home() {
             <Head title="Home" />
             <Navbar />
             <Hero />
-            <section className="container mb-[80px] md:mt-[150px] md:mb-[120px]  relative">
+            <section
+                className="container mb-[80px] md:mt-[150px] md:mb-[120px]  relative"
+                id="scroll"
+            >
                 <div className="max-w-[1080px] mx-auto flex flex-col-reverse lg:flex-row gap-[20px] md:gap-[63px]">
                     <div className="w-full lg:w-1/2">
                         <div className="w-[528px] text-black text-[32px] font-bold font-abhaya leading-[38.40px]">
@@ -34,9 +37,11 @@ function Home() {
                             <Button className="rounded-full py-4 px-6 font-Gilroy font-semibold text-sm sm:text-base">
                                 Become Member
                             </Button>
-                            <Button className="rounded-full py-4 px-6 text-[#272727] bg-[#f1f1f1] hover:bg-gray-200 font-Gilroy font-semibold text-sm sm:text-base">
-                                About Us
-                            </Button>
+                            <Link href="/about">
+                                <Button className="rounded-full py-4 px-6 text-[#272727] bg-[#f1f1f1] hover:bg-gray-200 font-Gilroy font-semibold text-sm sm:text-base">
+                                    About Us
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                     <div className="w-full lg:w-1/2 rounded-[30px] overflow-hidden">
@@ -46,13 +51,13 @@ function Home() {
                         />
                     </div>
                 </div>
-                <div class="absolute text-[#dddddd] text-[100px] md:text-[200px] font-normal font-abhaya leading-[150px] sm:leading-[200px] md:leading-[240px] left-[10px] sm:left-[32px] -top-[12rem] sm:-top-[15rem] md:-top-[19rem]">
+                <div class="absolute text-[#dddddd] text-[100px] md:text-[200px] lg:text-[300px] font-normal font-abhaya leading-[150px] sm:leading-[200px] md:leading-[240px] left-[10px] sm:left-[32px] -top-[12rem] sm:-top-[15rem] md:-top-[19rem]">
                     Believe
                 </div>
             </section>
 
             <ProgramSlider />
-            <section className="w-full mt-[80px] sm:mt-[100px] md:mt-[141px] md:pt-[80px] sm:pt-[100px] pb-[60px] sm:pb-[80px] md:pb-[98px] mb-[100px] sm:mb-[120px] md:mb-[161px] bg-[#150827] lg:bg-[#210f38]">
+            <section className="w-full mt-[80px] sm:mt-[100px] md:mt-[141px] md:pt-[80px] sm:pt-[100px] pb-[60px] sm:pb-[80px] md:pb-[98px] mb-[100px] sm:mb-[120px] md:mb-[161px] bg-[#150827] ">
                 <div className="md:container relative">
                     <div className="w-full md:w-[70%] relative md:static">
                         <img
@@ -76,7 +81,7 @@ function Home() {
                             Belong
                         </div>
                     </div>
-                    <div className="absolute bg-[#280D4A]/70 md:bg-[#280D4A]/40 w-full h-full top-0 left-0"></div>
+                    {/* <div className="absolute bg-[#280D4A]/70 md:bg-[#280D4A]/40 w-full h-full top-0 left-0"></div> */}
                 </div>
             </section>
             <section className="w-full py-[109px] sm:py-[80px] md:py-[90px] lg:py-[109px]">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const RenewedCard = () => {
     return (
@@ -7,11 +8,13 @@ const RenewedCard = () => {
                 Renewed
             </div>
             <div className="flex items-center gap-x-5 sm:gap-x-[25px]">
-                <img
-                    src="/images/hero/scrollDown.png"
-                    alt=""
-                    className="cursor-pointer w-[30px] md:w-auto"
-                />
+                <Link to="scroll" smooth={true}>
+                    <img
+                        src="/images/hero/scrollDown.png"
+                        alt=""
+                        className="cursor-pointer w-[30px] md:w-auto"
+                    />
+                </Link>
                 <div className="text-[#280d4a] text-[64px] sm:text-[80px] md:text-[120px] lg:text-[160px] font-normal font-abhaya leading-[64px] sm:leading-[80px] md:leading-[120px] lg:leading-[175.20px] self-end">
                     in Christ
                 </div>

@@ -10,21 +10,23 @@ function Store() {
         <MainLayout>
             <Head title="Store" />
             <Navbar />
-            <section className="w-full flex flex-col items-center justify-center pt-[215px] pb-[220px] relative">
-                <div className="w-[954px] text-center text-black text-[100px] font-bold font-abhaya leading-[90px]">
+            <section className="w-full flex flex-col items-center justify-center pt-[100px] md:pt-[150px] lg:pt-[215px] pb-[120px] md:pb-[170px] lg:pb-[220px] relative">
+                <div className="w-full max-w-[954px] text-center text-black text-[40px] leading-[40px] md:text-[60px] md:leading-[60px] lg:text-[100px] lg:leading-[90px] font-bold font-abhaya">
                     Our Shop is <br />
                     Coming Soon
                 </div>
-                <div className="w-[396px] text-center text-black text-base font-normal font-inter my-10">
-                    Subscribe to be the first to know when we lunch, and get a
+
+                <div className="w-full max-w-[396px] text-center text-black text-base font-normal font-inter my-6 md:my-8 lg:my-10">
+                    Subscribe to be the first to know when we launch, and get a
                     discount on your first order!
                 </div>
-                <div className="flex items-center gap-x-6">
+
+                <div className="container flex items-center gap-4 md:gap-6 w-full max-w-[600px]">
                     <Input
                         placeholder="Email"
-                        className="border border-[#8c9296] rounded-full w-[408px]"
+                        className="border border-[#8c9296] rounded-full w-full md:w-[408px] p-3"
                     />
-                    <Button className="text-white text-base font-medium font-outfit leading-none rounded-full px-[50px]">
+                    <Button className="text-white text-base font-medium font-outfit leading-none rounded-full px-[30px] md:px-[50px]">
                         Subscribe
                     </Button>
                 </div>
@@ -36,13 +38,14 @@ function Store() {
                             "radial-gradient(41.76% 41.76% at 50% 50%, rgba(3, 156, 9, 0.40) 0%, rgba(255, 201, 9, 0.00) 100%)",
                         filter: "blur(150px)",
                     }}
-                    className="absolute -top-[458px] -right-[535px] w-[1155px] h-[1155px]"
+                    className="absolute -top-[300px] md:-top-[400px] lg:-top-[458px] -right-[300px] md:-right-[400px] lg:-right-[535px] w-[600px] md:w-[800px] lg:w-[1155px] h-[600px] md:h-[800px] lg:h-[1155px]"
                 ></div>
-                <div className="right-[144px] top-[195px] absolute bottom-0 w-[51px] h-[51px]">
+
+                <div className="right-[100px] md:right-[144px] top-[100px] md:top-[195px] absolute bottom-0 w-[31px] h-[31px] md:w-[51px] md:h-[51px]">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="51"
-                        height="51"
+                        width="100%"
+                        height="100%"
                         viewBox="0 0 51 51"
                         fill="none"
                     >
@@ -67,11 +70,12 @@ function Store() {
                         </defs>
                     </svg>
                 </div>
+
                 <div className="right-[52px] bottom-[52px] absolute w-[21px] h-[21px]">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="21"
-                        height="21"
+                        width="100%"
+                        height="100%"
                         viewBox="0 0 21 21"
                         fill="none"
                     >
@@ -97,11 +101,12 @@ function Store() {
                         </defs>
                     </svg>
                 </div>
+
                 <div className="left-[196px] top-[156px] absolute w-[31px] h-[31px]">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="31"
-                        height="31"
+                        width="100%"
+                        height="100%"
                         viewBox="0 0 31 31"
                         fill="none"
                     >
@@ -131,8 +136,8 @@ function Store() {
                 <div className="left-[53px] bottom-[190px] absolute w-[21px] h-[21px]">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="21"
-                        height="21"
+                        width="100%"
+                        height="100%"
                         viewBox="0 0 21 21"
                         fill="none"
                     >

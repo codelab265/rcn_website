@@ -15,23 +15,34 @@ function News() {
             <section className="w-full pt-[209px] pb-[252px] bg-[#bee46c] relative">
                 <div className="w-full max-w-[1080px] mx-auto pl-[68px] flex flex-col z-10">
                     <CommunityMenu />
-                    <div className=" text-black text-[250px] font-bold font-abhaya leading-[225px] top-4">
+                    <div
+                        className="text-black font-bold font-abhaya mt-8 
+                        text-[70px] leading-[50px] 
+                        md:text-[120px] md:leading-[100px] 
+                        lg:text-[180px] lg:leading-[160px] 
+                        xl:text-[250px] xl:leading-[225px]"
+                    >
                         News
                     </div>
                 </div>
-                <div className="w-[1080px] h-[549px] bg-[#a2a2a2] rounded-[30px] left-0 right-0 mx-auto absolute -bottom-[337px] flex flex-col justify-end py-[53px] px-[68px] -z-0">
-                    <div className="text-[#717171] text-[32px] font-bold font-abhaya leading-[38.40px]">
+                <div className="left-6 right-6  max-w-[1080px] h-[300px] md:h-[549px] bg-[#a2a2a2] rounded-[30px] mx-auto absolute -bottom-[137px] md:-bottom-[337px] flex flex-col justify-end py-8 md:py-[53px] px-6 md:px-[68px] -z-0">
+                    <div className="text-[#717171] text-[24px] md:text-[32px] font-bold font-abhaya leading-[30px] md:leading-[38.40px]">
                         Featured
                     </div>
-                    <div className="max-w-[783px]  text-black text-[50px] font-bold font-abhaya leading-[60px]">
+                    <div className="max-w-full md:max-w-[783px] text-black text-[30px] md:text-[50px] font-bold font-abhaya leading-[36px] md:leading-[60px] mt-4">
                         Nulla ut dignissim nibh malesuada. Et amet vitae massa
-                        nunc{" "}
+                        nunc.
                     </div>
                 </div>
             </section>
 
-            <section className="container mt-[458px]">
-                <div className="text-[#dddddd] text-[300px] font-normal font-abhaya leading-[240px]">
+            <section className="container mt-[258px] md:mt-[458px]">
+                <div
+                    className="text-[#dddddd] text-[80px] leading-[70px] 
+    md:text-[150px] md:leading-[130px] 
+    lg:text-[200px] lg:leading-[170px] 
+    xl:text-[300px] xl:leading-[240px] font-normal font-abhaya"
+                >
                     Recent
                 </div>
                 <div className="w-full max-w-[1080px] mx-auto grid grid-cols-12 gap-x-[30px] gap-y-[57px] mt-10">
