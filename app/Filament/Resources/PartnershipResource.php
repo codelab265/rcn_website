@@ -2,11 +2,12 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\MembershipResource\Pages;
-use App\Filament\Resources\MembershipResource\RelationManagers;
-use App\Models\Membership;
+use App\Filament\Resources\PartnershipResource\Pages;
+use App\Filament\Resources\PartnershipResource\RelationManagers;
+use App\Models\Partnership;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Infolists\Components\KeyValueEntry;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -15,11 +16,11 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class MembershipResource extends Resource
+class PartnershipResource extends Resource
 {
-    protected static ?string $model = Membership::class;
+    protected static ?string $model = Partnership::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard-document';
 
     public static function form(Form $form): Form
     {
@@ -36,11 +37,14 @@ class MembershipResource extends Resource
                 Tables\Columns\TextColumn::make('email')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('phone_number')
-                    ->label('Phone Number')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('communication_mode')
-                    ->label('Communication Mode')
+                Tables\Columns\TextColumn::make('amount')
+                    ->money(fn($record) => $record->currency)
                     ->searchable(),
+                Tables\Columns\TextColumn::make('country')
+                    ->searchable(),
+
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -54,28 +58,35 @@ class MembershipResource extends Resource
                 //
             ])
             ->actions([
-                Action::make("other Details")->infolist([
+                Action::make("Mores Details")->infolist([
+                    TextEntry::make('address'),
                     TextEntry::make('city'),
-                    TextEntry::make('postal_code')
-                        ->label('Postal Code'),
+                    TextEntry::make('communication_mode'),
+                    TextEntry::make('partnership_frequency'),
+                    KeyValueEntry::make('form_of_partnership')
 
+                        ->keyLabel('')
+                        ->valueLabel('form of partnership'),
+                    TextEntry::make('month_of_commencement'),
+                    TextEntry::make('currency'),
                     TextEntry::make('whatsapp')
-                        ->label('Join Whatsapp Platform'),
+                        ->label('Join whatsapp platform'),
                     TextEntry::make('agreement')
                         ->label('Agree to opt into RCN London
                     communication and announcements'),
-                ])->modalSubmitAction(""),
+                ])->modalSubmitAction("")
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    /*  Tables\Actions\DeleteBulkAction::make(), */]),
+                    Tables\Actions\DeleteBulkAction::make(),
+                ]),
             ]);
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageMemberships::route('/'),
+            'index' => Pages\ManagePartnerships::route('/'),
         ];
     }
 }
