@@ -1,4 +1,5 @@
 import Navbar from "@/Components/Navbar";
+import PartnershipForm from "@/Components/PartnershipForm";
 import Subcribe from "@/Components/Subcribe";
 import { Button } from "@/Components/ui/button";
 import MainLayout from "@/Layouts/MainLayout";
@@ -119,9 +120,7 @@ function Partnership() {
                             are able. Together, we can expand the reach of the
                             gospel and fulfill this divine assignment.
                         </div>
-                        <Button className="rounded-full p-4 md:p-5 bg-black text-sm md:text-base font-normal font-inter h-[48px] md:h-[52px] mt-[20px] md:mt-[29px]">
-                            Become a Partner
-                        </Button>
+                        <PartnershipForm />
                     </div>
                     <div className="w-full h-[250px] sm:h-[350px] md:w-[825px] md:h-[418px] bg-[#a2a2a2] rounded-[30px] mt-[50px] md:mt-[80px]" />
                 </div>
@@ -197,9 +196,7 @@ function Partnership() {
                             </div>
 
                             <div className="mt-4">
-                                <Button className="rounded-full p-4 md:p-5 bg-black text-sm md:text-base font-normal font-inter h-[48px] md:h-[52px]">
-                                    Become a Partner
-                                </Button>
+                                <PartnershipForm />
                             </div>
                         </div>
 

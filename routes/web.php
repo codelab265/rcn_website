@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,7 @@ Route::get('/programmes', function () {
 Route::get('/contact', function () {
     return Inertia::render('Contact');
 })->name('contact');
+Route::post('/contact/store', [MainController::class, 'contact'])->name('contact.store');
 
 Route::get('/partnership', function () {
     return Inertia::render('Partnership');
@@ -44,14 +46,13 @@ Route::group(['prefix' => 'community', 'as' => 'community.'], function () {
     })->name('news');
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+Route::get('/donate', function () {
+    return Inertia::location('https://donate.stripe.com/3cs3cybNU6e7cbCeUU');
 });
 
-require __DIR__ . '/auth.php';
+Route::post('/subscribe', [MainController::class, 'subscribe'])->name('subscribe');
+
+Route::post('/unsubscribe', [MainController::class, 'unsubscribe'])->name('unsubscribe');
+
+Route::post('/membership', [MainController::class, 'membership'])->name('membership');
+Route::post('/partnership', [MainController::class, 'partnership'])->name('partnership');

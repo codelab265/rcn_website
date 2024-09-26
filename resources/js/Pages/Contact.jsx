@@ -4,10 +4,28 @@ import { Button } from "@/Components/ui/button";
 import { Input } from "@/Components/ui/input";
 import { Textarea } from "@/Components/ui/textarea";
 import MainLayout from "@/Layouts/MainLayout";
-import { Head } from "@inertiajs/react";
+import { Head, useForm } from "@inertiajs/react";
 import React from "react";
+import { toast } from "sonner";
 
 function Contact() {
+    const { data, setData, post, processing, errors, reset } = useForm({
+        name: "",
+        email: "",
+        message: "",
+    });
+
+    const submit = (e) => {
+        e.preventDefault();
+
+        post(route("contact.store"), {
+            onSuccess: () => {
+                reset();
+                toast.success("Message sent successfully");
+            },
+            preserveScroll: true,
+        });
+    };
     return (
         <MainLayout>
             <Head title="Contact" />
@@ -31,18 +49,51 @@ function Contact() {
                             <Input
                                 placeholder="Full Name"
                                 className="bg-[#f4f4f4] font-outfit text-[#a5a8ab]"
+                                value={data.name}
+                                onChange={(e) =>
+                                    setData("name", e.target.value)
+                                }
                             />
+                            {errors.name && (
+                                <span className="text-red-500 font-abhaya text-sm font-medium">
+                                    {errors.name}
+                                </span>
+                            )}
+
                             <Input
                                 placeholder="Email"
                                 className="bg-[#f4f4f4] font-outfit text-[#a5a8ab]"
+                                value={data.email}
+                                onChange={(e) =>
+                                    setData("email", e.target.value)
+                                }
                             />
+                            {errors.email && (
+                                <span className="text-red-500 font-abhaya text-sm font-medium">
+                                    {errors.email}
+                                </span>
+                            )}
+
                             <Textarea
                                 placeholder="Message"
                                 className="bg-[#f4f4f4] font-outfit text-[#a5a8ab]"
+                                value={data.message}
+                                onChange={(e) =>
+                                    setData("message", e.target.value)
+                                }
                             />
+                            {errors.message && (
+                                <span className="text-red-500 font-abhaya text-sm font-medium">
+                                    {errors.message}
+                                </span>
+                            )}
                         </div>
                         <div className="text-right mt-5">
-                            <Button className="px-[50px] py-[18px] rounded-full font-outfit">
+                            <Button
+                                className="px-[50px] py-[18px] rounded-full font-outfit"
+                                onClick={submit}
+                                disabled={processing}
+                            >
                                 Send
                             </Button>
                         </div>

@@ -4,8 +4,85 @@ import { Button } from "@/Components/ui/button";
 import MainLayout from "@/Layouts/MainLayout";
 import { Head } from "@inertiajs/react";
 import React from "react";
+import {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+} from "@/Components/ui/alert-dialog";
+import { SidebarClose } from "lucide-react";
 
 function Programmes() {
+    const data = [
+        {
+            image: "/images/program.png",
+            title: "Weekly Service",
+            description:
+                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
+            time: "Every Sunday",
+        },
+        {
+            image: "/images/program.png",
+            title: "10 Hours Prayers",
+            description:
+                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
+            time: "Every Sunday",
+        },
+        {
+            image: "/images/program.png",
+            title: "Night Prayers",
+            description:
+                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
+            time: "Every Sunday",
+        },
+        {
+            image: "/images/program.png",
+            title: "Power Start",
+            description:
+                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
+            time: "Every Sunday",
+        },
+        {
+            image: "/images/program.png",
+            title: "TTP",
+            description:
+                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
+            time: "Every Sunday",
+        },
+        {
+            image: "/images/program.png",
+            title: "Mini Vigil",
+            description:
+                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
+            time: "Every Sunday",
+        },
+        {
+            image: "/images/program.png",
+            title: "Children’s Ministry",
+            description:
+                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
+            time: "Every Sunday",
+        },
+        {
+            image: "/images/program.png",
+            title: "Next Generation Remnants",
+            description:
+                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
+            time: "Every Sunday",
+        },
+        {
+            image: "/images/program.png",
+            title: "The Contenders",
+            description:
+                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
+            time: "Every Sunday",
+        },
+    ];
     return (
         <MainLayout>
             <Head title="Programmes" />
@@ -86,15 +163,46 @@ function Programmes() {
                     Programmes
                 </div>
                 <div className="max-w-[1080px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-[30px] sm:mt-[40px] md:mt-[50px] lg:mt-[57px]">
-                    <div className="h-[300px] sm:h-[350px] md:h-[400px] lg:h-[463px] bg-[#a2a2a2] rounded-[30px]" />
-                    <div className="h-[300px] sm:h-[350px] md:h-[400px] lg:h-[463px] bg-[#a2a2a2] rounded-[30px]" />
-                    <div className="h-[300px] sm:h-[350px] md:h-[400px] lg:h-[463px] bg-[#a2a2a2] rounded-[30px]" />
-                    <div className="h-[300px] sm:h-[350px] md:h-[400px] lg:h-[463px] bg-[#a2a2a2] rounded-[30px]" />
-                    <div className="h-[300px] sm:h-[350px] md:h-[400px] lg:h-[463px] bg-[#a2a2a2] rounded-[30px]" />
-                    <div className="h-[300px] sm:h-[350px] md:h-[400px] lg:h-[463px] bg-[#a2a2a2] rounded-[30px]" />
-                    <div className="h-[300px] sm:h-[350px] md:h-[400px] lg:h-[463px] bg-[#a2a2a2] rounded-[30px]" />
-                    <div className="h-[300px] sm:h-[350px] md:h-[400px] lg:h-[463px] bg-[#a2a2a2] rounded-[30px]" />
-                    <div className="h-[300px] sm:h-[350px] md:h-[400px] lg:h-[463px] bg-[#a2a2a2] rounded-[30px]" />
+                    {data.map((item) => (
+                        <AlertDialog>
+                            <AlertDialogTrigger>
+                                <div className="h-[300px] sm:h-[350px] md:h-[400px] lg:h-[463px] bg-[#a2a2a2] rounded-[30px] flex flex-col justify-end pb-[51px] px-[31px] cursor-pointer">
+                                    <div className="text-black text-[34px] font-bold font-abhaya leading-[34px]">
+                                        {item.title}
+                                    </div>
+                                    <div className="text-black text-2xl font-extrabold font-abhaya leading-[34px] mt-[2px]">
+                                        {item.time}
+                                    </div>
+                                </div>
+                            </AlertDialogTrigger>
+                            <AlertDialogContent className="max-w-[1130px]">
+                                <AlertDialogHeader>
+                                    <AlertDialogDescription className="px-4  lg:px-[111px] lg:py-[90px]">
+                                        <div className="text-gray-300 hidden lg:block">
+                                            Press ESC to close
+                                        </div>
+                                        <div className="flex flex-col-reverse lg:flex-row  gap-12">
+                                            <div className="flex-1 flex flex-col justify-center">
+                                                <div className="text-black text-[50px] lg:text-[70px] font-bold font-abhaya leading-[63px]">
+                                                    {item.title}
+                                                </div>
+                                                <div className="lg:max-w-[439px] text-black text-base font-normal font-['Inter'] leading-normal mt-[26px]">
+                                                    {item.description}
+                                                </div>
+                                                <div className="text-black text-[32px] font-bold font-abhaya leading-relaxed mt-[53px]">
+                                                    {item.time}
+                                                </div>
+                                            </div>
+                                            <div className="w-full lg:w-[360.36px] h-[263.86px] md:h-[363.86px] lg:h-[463.86px] bg-[#a2a2a2] rounded-[30px]" />
+                                        </div>
+                                    </AlertDialogDescription>
+                                </AlertDialogHeader>
+                                <AlertDialogFooter>
+                                    <AlertDialogCancel>Close</AlertDialogCancel>
+                                </AlertDialogFooter>
+                            </AlertDialogContent>
+                        </AlertDialog>
+                    ))}
                 </div>
             </section>
             <Subcribe />

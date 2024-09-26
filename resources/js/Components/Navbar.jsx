@@ -105,9 +105,11 @@ function Navbar() {
                         </SheetHeader>
                     </SheetContent>
                 </Sheet>
-                <Button className="px-[20px] sm:px-[25px] md:px-[30px] text-sm sm:text-base md:text-lg rounded-full bg-white text-black hover:text-white uppercase font-Gilroy font-semibold">
-                    Give
-                </Button>
+                <Link href="/donate">
+                    <Button className="px-[20px] sm:px-[25px] md:px-[30px] text-sm sm:text-base md:text-lg rounded-full bg-white text-black hover:text-white uppercase font-Gilroy font-semibold">
+                        Give
+                    </Button>
+                </Link>
             </div>
         </div>
     );

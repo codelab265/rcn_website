@@ -1,6 +1,7 @@
 import Demo from "@/Components/Demo";
 import Hero from "@/Components/Home/Hero";
 import ProgramSlider from "@/Components/Home/ProgramSlider";
+import MemberForm from "@/Components/MemberForm";
 import Navbar from "@/Components/Navbar";
 import Subcribe from "@/Components/Subcribe";
 import { Button } from "@/Components/ui/button";
@@ -34,9 +35,7 @@ function Home() {
                             this end of the age.
                         </div>
                         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-[15px]">
-                            <Button className="rounded-full py-4 px-6 font-Gilroy font-semibold text-sm sm:text-base">
-                                Become Member
-                            </Button>
+                            <MemberForm />
                             <Link href="/about">
                                 <Button className="rounded-full py-4 px-6 text-[#272727] bg-[#f1f1f1] hover:bg-gray-200 font-Gilroy font-semibold text-sm sm:text-base">
                                     About Us
