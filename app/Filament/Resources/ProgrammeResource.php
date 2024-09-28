@@ -26,16 +26,18 @@ class ProgrammeResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('description')
+                Forms\Components\Textarea::make('description')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('time')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
                     ->image()
                     ->required(),
-                Forms\Components\TextInput::make('time')
-                    ->required()
-                    ->maxLength(255),
-            ]);
+            ])
+            ->columns(1)
+        ;
     }
 
     public static function table(Table $table): Table

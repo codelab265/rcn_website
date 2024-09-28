@@ -5,9 +5,34 @@ import Subcribe from "@/Components/Subcribe";
 import { Button } from "@/Components/ui/button";
 import MainLayout from "@/Layouts/MainLayout";
 import { Head } from "@inertiajs/react";
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
 
 function Events() {
+    useEffect(() => {
+        const token = "ZXHQDJK25SQ42ORQNY4C";
+        const organization_id = "2346826942443";
+
+        const config = {
+            headers: {
+                Authorization: `Bearer ${token}`,
+                "x-requested-with": null, // Disable the default header
+            },
+        };
+
+        axios
+            .get(
+                `https://www.eventbriteapi.com/v3/organizations/${organization_id}/events/`,
+                config
+            )
+            .then((response) => {
+                console.log(response.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }, []);
+
     return (
         <MainLayout>
             <Head title="Events" />

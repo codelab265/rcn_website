@@ -178,6 +178,11 @@ function PartnershipForm() {
                 setOpen(false);
                 toast.success("Membership form submitted successfully");
             },
+            onError: () => {
+                toast.error(
+                    "An error occurred, Please check if all required fields are filled"
+                );
+            },
             preserveScroll: true,
         });
     };

@@ -116,7 +116,7 @@ class MainController extends Controller
             'agreement' => $request->agreement,
             'currency' => $request->currency_category,
             'amount' => $request->amount,
-            'form_of_partnership' => json_encode($request->form_of_partnership),
+            'form_of_partnership' => implode(',', $request->form_of_partnership),
             'month_of_commencement' => $request->month_of_commencement,
             'partnership_frequency' => $request->partnership_frequency
         ];
