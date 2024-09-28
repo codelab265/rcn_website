@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ProgrammeResource\Pages;
-use App\Filament\Resources\ProgrammeResource\RelationManagers;
-use App\Models\Programme;
+use App\Filament\Resources\EventResource\Pages;
+use App\Filament\Resources\EventResource\RelationManagers;
+use App\Models\Event;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,11 +13,13 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ProgrammeResource extends Resource
+class EventResource extends Resource
 {
-    protected static ?string $model = Programme::class;
+    protected static ?string $model = Event::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Community';
+    protected static ?string $recordTitleAttribute = 'title';
 
     public static function form(Form $form): Form
     {
@@ -26,19 +28,19 @@ class ProgrammeResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\DatePicker::make('event_date')
+                    ->after(now())
+                    ->required(),
                 Forms\Components\Textarea::make('description')
                     ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('time')
-                    ->required()
+                    ->columnSpanFull()
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
-                    ->directory('programmes')
                     ->image()
-                    ->required(),
-            ])
-            ->columns(1)
-        ;
+                    ->required()
+                    ->columnSpanFull(),
+
+            ]);
     }
 
     public static function table(Table $table): Table
@@ -51,10 +53,12 @@ class ProgrammeResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('description')
                     ->words(6)
+                    ->lineClamp(1)
                     ->searchable(),
 
-                Tables\Columns\TextColumn::make('time')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('event_date')
+                    ->date()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -82,7 +86,7 @@ class ProgrammeResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageProgrammes::route('/'),
+            'index' => Pages\ManageEvents::route('/'),
         ];
     }
 }

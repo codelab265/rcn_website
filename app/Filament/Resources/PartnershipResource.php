@@ -21,6 +21,7 @@ class PartnershipResource extends Resource
     protected static ?string $model = Partnership::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-clipboard-document';
+    protected static ?string $navigationGroup = 'Forms Management';
 
     public static function form(Form $form): Form
     {

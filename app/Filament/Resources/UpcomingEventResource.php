@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ProgrammeResource\Pages;
-use App\Filament\Resources\ProgrammeResource\RelationManagers;
-use App\Models\Programme;
+use App\Filament\Resources\UpcomingEventResource\Pages;
+use App\Filament\Resources\UpcomingEventResource\RelationManagers;
+use App\Models\UpcomingEvent;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,11 +13,12 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ProgrammeResource extends Resource
+class UpcomingEventResource extends Resource
 {
-    protected static ?string $model = Programme::class;
+    protected static ?string $model = UpcomingEvent::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-calendar-days';
+    protected static ?string $recordTitleAttribute = 'title';
 
     public static function form(Form $form): Form
     {
@@ -26,35 +27,34 @@ class ProgrammeResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('description')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('time')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\FileUpload::make('image')
-                    ->directory('programmes')
-                    ->image()
+                Forms\Components\DatePicker::make('event_date')
                     ->required(),
-            ])
-            ->columns(1)
-        ;
+                Forms\Components\TextInput::make('link')
+                    ->label('Eventbrite Link')
+                    ->required()
+                    ->columnSpanFull(),
+                Forms\Components\FileUpload::make('image')
+                    ->directory('upcoming_events')
+                    ->required()
+                    ->columnSpanFull(),
+                Forms\Components\Toggle::make('active'),
+            ]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('image')
-                    ->circular(),
+                Tables\Columns\ImageColumn::make('image')->circular(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('description')
-                    ->words(6)
+                Tables\Columns\TextColumn::make('event_date')
+                    ->date()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('link')
+                    ->label('Eventbrite Link')
                     ->searchable(),
-
-                Tables\Columns\TextColumn::make('time')
-                    ->searchable(),
+                Tables\Columns\ToggleColumn::make('active'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -68,7 +68,6 @@ class ProgrammeResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
@@ -82,7 +81,7 @@ class ProgrammeResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageProgrammes::route('/'),
+            'index' => Pages\ManageUpcomingEvents::route('/'),
         ];
     }
 }

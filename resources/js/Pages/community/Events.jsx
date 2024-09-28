@@ -50,7 +50,7 @@ function Events() {
                         Events
                     </div>
                 </div>
-                <div className="left-6 right-6  max-w-[1080px] h-[300px] md:h-[549px] bg-[#a2a2a2] rounded-[30px] mx-auto absolute -bottom-[137px] md:-bottom-[337px] flex flex-col justify-end py-8 md:py-[53px] px-6 md:px-[68px] -z-0">
+                <div className="left-6 right-6 max-w-[1080px] h-[300px] md:h-[549px] bg-[#a2a2a2] rounded-[30px] mx-auto absolute -bottom-[137px] md:-bottom-[337px] flex flex-col justify-end py-8 md:py-[53px] px-6 md:px-[68px] -z-0">
                     <div className="text-[#717171] text-[24px] md:text-[32px] font-bold font-abhaya leading-[30px] md:leading-[38.40px]">
                         Featured
                     </div>

@@ -19,6 +19,7 @@ class SubscriberResource extends Resource
     protected static ?string $model = Subscriber::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-at-symbol';
+    protected static ?string $navigationGroup = 'Forms Management';
 
     public static function form(Form $form): Form
     {

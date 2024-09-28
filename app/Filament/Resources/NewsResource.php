@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ProgrammeResource\Pages;
-use App\Filament\Resources\ProgrammeResource\RelationManagers;
-use App\Models\Programme;
+use App\Filament\Resources\NewsResource\Pages;
+use App\Filament\Resources\NewsResource\RelationManagers;
+use App\Models\News;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,11 +13,13 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ProgrammeResource extends Resource
+class NewsResource extends Resource
 {
-    protected static ?string $model = Programme::class;
+    protected static ?string $model = News::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Community';
+    protected static ?string $recordTitleAttribute = 'title';
 
     public static function form(Form $form): Form
     {
@@ -28,17 +30,11 @@ class ProgrammeResource extends Resource
                     ->maxLength(255),
                 Forms\Components\Textarea::make('description')
                     ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('time')
-                    ->required()
-                    ->maxLength(255),
+                    ->columnSpanFull(),
                 Forms\Components\FileUpload::make('image')
-                    ->directory('programmes')
                     ->image()
                     ->required(),
-            ])
-            ->columns(1)
-        ;
+            ])->columns(1);
     }
 
     public static function table(Table $table): Table
@@ -50,10 +46,7 @@ class ProgrammeResource extends Resource
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('description')
-                    ->words(6)
-                    ->searchable(),
-
-                Tables\Columns\TextColumn::make('time')
+                    ->words('5')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -82,7 +75,7 @@ class ProgrammeResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageProgrammes::route('/'),
+            'index' => Pages\ManageNews::route('/'),
         ];
     }
 }

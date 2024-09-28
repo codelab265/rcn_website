@@ -2,10 +2,11 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ProgrammeResource\Pages;
-use App\Filament\Resources\ProgrammeResource\RelationManagers;
-use App\Models\Programme;
+use App\Filament\Resources\SermonResource\Pages;
+use App\Filament\Resources\SermonResource\RelationManagers;
+use App\Models\Sermon;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -13,9 +14,11 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ProgrammeResource extends Resource
+class SermonResource extends Resource
 {
-    protected static ?string $model = Programme::class;
+    protected static ?string $model = Sermon::class;
+    protected static ?string $navigationGroup = 'Community';
+    protected static ?string $recordTitleAttribute = 'title';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -25,35 +28,29 @@ class ProgrammeResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('title')
                     ->required()
-                    ->maxLength(255),
-                Forms\Components\Textarea::make('description')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('time')
+                    ->maxLength(255)
+                    ->columnSpanFull(),
+                Forms\Components\TextInput::make('pastor')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
-                    ->directory('programmes')
+                    ->label('Pastor Image')
                     ->image()
                     ->required(),
-            ])
-            ->columns(1)
-        ;
+
+            ]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('image')
+                Tables\Columns\ImageColumn::make('images')
                     ->circular(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('description')
-                    ->words(6)
-                    ->searchable(),
 
-                Tables\Columns\TextColumn::make('time')
+                Tables\Columns\TextColumn::make('pastor')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -68,7 +65,6 @@ class ProgrammeResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
@@ -82,7 +78,7 @@ class ProgrammeResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageProgrammes::route('/'),
+            'index' => Pages\ManageSermons::route('/'),
         ];
     }
 }
