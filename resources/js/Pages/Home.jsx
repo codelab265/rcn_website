@@ -4,13 +4,16 @@ import ProgramSlider from "@/Components/Home/ProgramSlider";
 import MemberForm from "@/Components/MemberForm";
 import Navbar from "@/Components/Navbar";
 import Subcribe from "@/Components/Subcribe";
+import UpcomingEvent from "@/Components/UpcomingEvent";
 import { Button } from "@/Components/ui/button";
 import { Input } from "@/Components/ui/input";
 import MainLayout from "@/Layouts/MainLayout";
 import { Head, Link } from "@inertiajs/react";
 import React from "react";
 
-function Home() {
+function Home(props) {
+    const { programmes, upcomingEvent } = props;
+
     return (
         <MainLayout>
             <Head title="Home" />
@@ -55,7 +58,7 @@ function Home() {
                 </div>
             </section>
 
-            <ProgramSlider />
+            {programmes.length > 0 && <ProgramSlider programmes={programmes} />}
             <section className="w-full mt-[80px] sm:mt-[100px] md:mt-[141px] md:pt-[80px] sm:pt-[100px] pb-[60px] sm:pb-[80px] md:pb-[98px] mb-[100px] sm:mb-[120px] md:mb-[161px] bg-[#150827] ">
                 <div className="md:container relative">
                     <div className="w-full md:w-[70%] relative md:static">
@@ -83,34 +86,11 @@ function Home() {
                     {/* <div className="absolute bg-[#280D4A]/70 md:bg-[#280D4A]/40 w-full h-full top-0 left-0"></div> */}
                 </div>
             </section>
-            <section className="w-full py-[109px] sm:py-[80px] md:py-[90px] lg:py-[109px]">
-                <div className="container flex flex-col lg:flex-row lg:gap-[66px]">
-                    <div className="w-full lg:w-1/2 lg:pl-[39px]">
-                        <img
-                            className="max-w-full w-full rounded-[30px]"
-                            src="/images/event.png"
-                            alt="Event"
-                        />
-                    </div>
-                    <div className="w-full lg:w-1/2">
-                        <div className="text-black text-[28px] md:text-[32px] font-normal font-abhaya leading-relaxed mt-[40px] md:mt-[60px] lg:mt-[73px]">
-                            Upcoming Event
-                        </div>
-                        <div className="text-[#280d4a] text-[48px] md:text-[60px] lg:text-[70px] font-bold font-abhaya leading-[50px] md:leading-[55px] lg:leading-[63px] my-[20px] md:my-[30px]">
-                            Healing and Prophetic
-                            <br />
-                            Streams
-                        </div>
-                        <div className="text-[#9a9a9a] text-xl md:text-2xl font-Gilroy font-medium leading-7 md:leading-9 mt-4 md:mt-6">
-                            25 August, 2024
-                        </div>
-                        <Button className="rounded-full text-sm md:text-base font-Gilroy font-semibold mt-6 md:mt-9">
-                            Register now
-                        </Button>
-                    </div>
-                </div>
-            </section>
-
+            {upcomingEvent && (
+                <section className="w-full py-[109px] sm:py-[80px] md:py-[90px] lg:py-[109px]">
+                    <UpcomingEvent event={upcomingEvent} />
+                </section>
+            )}
             <section className="px-8 flex flex-col bg-[#f9f9f9] mb-[100px] sm:mb-[120px] md:mb-[140px] lg:mb-[158px]">
                 <h1 className="max-w-full text-[100px] sm:text-[160px] md:text-[220px] lg:text-[260px] font-abhaya font-normal text-[#DEDEDE]">
                     Become

@@ -5,11 +5,26 @@ namespace App\Http\Controllers;
 use App\Models\Contact;
 use App\Models\Membership;
 use App\Models\Partnership;
+use App\Models\Programme;
 use App\Models\Subscriber;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
-class MainController extends Controller
+class MainController extends BaseController
 {
+
+    public function home()
+    {
+
+        return Inertia::render('Home', $this->data);
+    }
+
+    public function programmes()
+    {
+        return Inertia::render('Programmes', $this->data);
+    }
+
+
     public function contact(Request $request)
     {
         $request->validate([

@@ -1,14 +1,14 @@
 <?php
 
+use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('Home');
-})->name('home');
+Route::get('/', [MainController::class, 'home'])->name('home');
 
 Route::get('/about', function () {
     return Inertia::render('About');
@@ -18,9 +18,7 @@ Route::get('/store', function () {
     return Inertia::render('Store');
 })->name('store');
 
-Route::get('/programmes', function () {
-    return Inertia::render('Programmes');
-})->name('programmes');
+Route::get('/programmes', [MainController::class, 'programmes'])->name('programmes');
 
 Route::get('/contact', function () {
     return Inertia::render('Contact');
@@ -32,18 +30,14 @@ Route::get('/partnership', function () {
 })->name('partnership');
 
 Route::group(['prefix' => 'community', 'as' => 'community.'], function () {
-    Route::get('/events', function () {
-        return Inertia::render('community/Events');
-    })->name('events');
+    Route::get('/events', [CommunityController::class, 'events'])->name('events');
     Route::get('/sermons', function () {
         return Inertia::render('community/Sermons');
     })->name('sermons');
     Route::get('/podcasts', function () {
         return Inertia::render('community/Podcasts');
     })->name('podcasts');
-    Route::get('/news', function () {
-        return Inertia::render('community/News');
-    })->name('news');
+    Route::get('/news', [CommunityController::class, 'news'])->name('news');
 });
 
 Route::get('/donate', function () {
@@ -56,3 +50,8 @@ Route::post('/unsubscribe', [MainController::class, 'unsubscribe'])->name('unsub
 
 Route::post('/membership', [MainController::class, 'membership'])->name('membership');
 Route::post('/partnership', [MainController::class, 'partnership'])->name('partnership');
+
+
+Route::get('storage-link', function () {
+    Artisan::call('storage:link');
+});

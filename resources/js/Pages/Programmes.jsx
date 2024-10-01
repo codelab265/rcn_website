@@ -16,73 +16,10 @@ import {
     AlertDialogTrigger,
 } from "@/Components/ui/alert-dialog";
 import { SidebarClose } from "lucide-react";
+import UpcomingEvent from "@/Components/UpcomingEvent";
 
-function Programmes() {
-    const data = [
-        {
-            image: "/images/program.png",
-            title: "Weekly Service",
-            description:
-                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
-            time: "Every Sunday",
-        },
-        {
-            image: "/images/program.png",
-            title: "10 Hours Prayers",
-            description:
-                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
-            time: "Every Sunday",
-        },
-        {
-            image: "/images/program.png",
-            title: "Night Prayers",
-            description:
-                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
-            time: "Every Sunday",
-        },
-        {
-            image: "/images/program.png",
-            title: "Power Start",
-            description:
-                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
-            time: "Every Sunday",
-        },
-        {
-            image: "/images/program.png",
-            title: "TTP",
-            description:
-                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
-            time: "Every Sunday",
-        },
-        {
-            image: "/images/program.png",
-            title: "Mini Vigil",
-            description:
-                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
-            time: "Every Sunday",
-        },
-        {
-            image: "/images/program.png",
-            title: "Children’s Ministry",
-            description:
-                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
-            time: "Every Sunday",
-        },
-        {
-            image: "/images/program.png",
-            title: "Next Generation Remnants",
-            description:
-                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
-            time: "Every Sunday",
-        },
-        {
-            image: "/images/program.png",
-            title: "The Contenders",
-            description:
-                "This arm of the ministry is specifically tailored for our teenagers where anything and everything is laid bare, discussed and prayed over according to His leading. If you are or have a teenager and would like to be a part of this meeting, kindly inbox us.",
-            time: "Every Sunday",
-        },
-    ];
+function Programmes(props) {
+    const { programmes, upcomingEvent } = props;
     return (
         <MainLayout>
             <Head title="Programmes" />
@@ -118,34 +55,11 @@ function Programmes() {
                     />
                 </div>
             </section>
-            <section className="w-full py-[109px] sm:py-[80px] md:py-[90px] lg:py-[109px]">
-                <div className="container max-w-[1080px] mx-auto flex flex-col lg:flex-row lg:gap-[66px]">
-                    <div className="w-full lg:w-1/2">
-                        <img
-                            className="max-w-full w-full rounded-[30px]"
-                            src="/images/event.png"
-                            alt="Event"
-                        />
-                    </div>
-                    <div className="w-full lg:w-1/2">
-                        <div className="text-black text-[28px] md:text-[32px] font-normal font-abhaya leading-relaxed mt-[40px] md:mt-[60px] lg:mt-[73px]">
-                            Upcoming Event
-                        </div>
-                        <div className="text-[#280d4a] text-[48px] md:text-[60px] lg:text-[70px] font-bold font-abhaya leading-[50px] md:leading-[55px] lg:leading-[63px] my-[20px] md:my-[30px]">
-                            Healing and Prophetic
-                            <br />
-                            Streams
-                        </div>
-                        <div className="text-[#9a9a9a] text-xl md:text-2xl font-Gilroy font-medium leading-7 md:leading-9 mt-4 md:mt-6">
-                            25 August, 2024
-                        </div>
-                        <Button className="rounded-full text-sm md:text-base font-Gilroy font-semibold mt-6 md:mt-9">
-                            Register now
-                        </Button>
-                    </div>
-                </div>
-            </section>
-
+            {upcomingEvent && (
+                <section className="w-full py-[109px] sm:py-[80px] md:py-[90px] lg:py-[109px]">
+                    <UpcomingEvent event={upcomingEvent} />
+                </section>
+            )}
             <section className="w-full bg-[#f0c23c]">
                 <div className="container max-w-[1080px] mx-auto pt-[60px] md:pt-[100px] pb-[120px] md:pb-[237px] relative flex justify-center">
                     <div className="max-w-[827px] text-center text-black text-[40px] sm:text-[48px] md:text-[56px] lg:text-[64px] font-bold font-abhaya leading-tight">
@@ -163,7 +77,7 @@ function Programmes() {
                     Programmes
                 </div>
                 <div className="max-w-[1080px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-[30px] sm:mt-[40px] md:mt-[50px] lg:mt-[57px]">
-                    {data.map((item) => (
+                    {programmes.map((item) => (
                         <AlertDialog>
                             <AlertDialogTrigger>
                                 <div className="h-[300px] sm:h-[350px] md:h-[400px] lg:h-[463px] bg-[#a2a2a2] rounded-[30px] flex flex-col justify-end pb-[51px] px-[31px] cursor-pointer">

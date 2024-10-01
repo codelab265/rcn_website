@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 
-const ProgramSlider = () => {
+const ProgramSlider = ({ programmes }) => {
     const programs = [
         {
             title: "Sunday Worship",
@@ -98,7 +98,7 @@ const ProgramSlider = () => {
                     }}
                     {...settings}
                 >
-                    {programs.map((program, index) => (
+                    {programmes.map((program, index) => (
                         <div
                             key={index}
                             className={`w-full px-5 md:px-[60px] box-border transition-all duration-500 ease-in-out ${
@@ -109,7 +109,7 @@ const ProgramSlider = () => {
                         >
                             <div className="relative bg-white rounded-[30px] overflow-hidden shadow-lg">
                                 <img
-                                    src={program.image}
+                                    src={`/storage/${program.image}`}
                                     alt={program.title}
                                     className="w-full h-[400px] md:h-[617px] object-cover"
                                 />
