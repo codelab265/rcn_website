@@ -38,6 +38,12 @@ class SermonResource extends Resource
                     ->image()
                     ->required(),
 
+                Forms\Components\TextInput::make('link')
+                    ->label('Youutube Link')
+                    ->required()
+                    ->columnSpanFull()
+
+
             ]);
     }
 
@@ -48,6 +54,9 @@ class SermonResource extends Resource
                 Tables\Columns\ImageColumn::make('images')
                     ->circular(),
                 Tables\Columns\TextColumn::make('title')
+                    ->description(function ($record) {
+                        return "Youtube Link: " . $record->link;
+                    })
                     ->searchable(),
 
                 Tables\Columns\TextColumn::make('pastor')
