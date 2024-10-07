@@ -23,6 +23,7 @@ Route::get('/programmes', [MainController::class, 'programmes'])->name('programm
 Route::get('/contact', function () {
     return Inertia::render('Contact');
 })->name('contact');
+
 Route::post('/contact/store', [MainController::class, 'contact'])->name('contact.store');
 
 Route::get('/partnership', function () {
@@ -34,6 +35,7 @@ Route::group(['prefix' => 'community', 'as' => 'community.'], function () {
     Route::get('/sermons', function () {
         return Inertia::render('community/Sermons');
     })->name('sermons');
+
     Route::get('/podcasts', function () {
         return Inertia::render('community/Podcasts');
     })->name('podcasts');
