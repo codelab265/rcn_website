@@ -190,7 +190,7 @@ function PartnershipForm() {
     return (
         <div className="">
             <Button
-                className="rounded-full py-4 px-6 font-Gilroy font-semibold text-sm sm:text-base"
+                className="rounded-full py-4 px-6 font-Gilroy font-semibold text-sm sm:text-base mt-[30px]"
                 onClick={() => setOpen(true)}
             >
                 Become a Partner

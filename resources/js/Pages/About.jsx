@@ -307,7 +307,13 @@ function About() {
             </section>
 
             <section className="container max-w-[1080px] mx-auto pt-[80px] sm:pt-[100px] md:pt-[128px] flex flex-col md:flex-row items-center gap-x-[20px] md:gap-x-[40px] lg:gap-x-[91px] mb-[100px] sm:mb-[150px] md:mb-[226px]">
-                <div className="w-full md:max-w-[351px] h-[300px] sm:h-[400px] md:h-[485px] bg-[#836bc1] rounded-[20px] mx-auto" />
+                <div className="w-full md:max-w-[351px] h-[300px] sm:h-[400px] md:h-[485px] bg-[#836bc1] rounded-[20px] mx-auto">
+                    <img
+                        src="/images/about/about.png"
+                        className="w-full h-full object-cover"
+                        alt=""
+                    />
+                </div>
 
                 <div className="flex flex-col mt-[30px]  md:mt-0">
                     <div className="text-black text-base font-normal font-inter leading-normal max-w-full md:max-w-[619px] mx-auto lg:px-0">
