@@ -17,7 +17,8 @@ class UpcomingEventResource extends JsonResource
         return [
             'title' => $this->title,
             'image' => $this->image,
-            'event_date' => date('d M, Y', strtotime($this->event_date)),
+            'event_date' => $this->event_date,
+            'description' => $this->description,
             'link' => $this->link
         ];
     }

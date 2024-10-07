@@ -27,8 +27,9 @@ class UpcomingEventResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\DatePicker::make('event_date')
+                Forms\Components\TextInput::make('event_date')
                     ->required(),
+                Forms\Components\Textarea::make('description')->columnSpanFull(),
                 Forms\Components\TextInput::make('link')
                     ->label('Eventbrite Link')
                     ->required()
