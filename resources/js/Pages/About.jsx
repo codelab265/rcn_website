@@ -41,7 +41,7 @@ function About() {
                 </div>
             </section>
             <section className="container pb-[100px] lg:hidden">
-                <div className="w-full flex flex-wrap gap-[40px] mt-[40px]">
+                <div className="w-full flex flex-wrap gap-[40px] md:mt-[40px]">
                     <div className="w-full">
                         <div className="w-full bg-[#836BC1] rounded-[30px] overflow-hidden h-[300px] sm:h-[361px] mb-4">
                             <img
@@ -182,13 +182,13 @@ function About() {
                 </div>
             </section>
             <section className="w-full bg-[#bf0987] ">
-                <div className="container max-w-[1080px] mx-auto h-[400px] sm:h-[500px] md:h-[634px] flex items-center justify-center relative">
-                    <div className="max-w-[90%] md:max-w-[827px] text-center text-white text-[28px] sm:text-[40px] md:text-[50px] font-bold font-abhaya leading-[36px] sm:leading-[48px] md:leading-[60px] px-4">
+                <div className="container max-w-[1080px] mx-auto h-[400px] md:h-[634px] flex items-center justify-center relative">
+                    <div className="w-full md:max-w-[827px] text-center text-white text-[28px] md:text-[50px] font-bold font-abhaya leading-[36px] md:leading-[60px] px-4">
                         Transforming worldly systems and nurturing ministers
                         with the knowledge and strength to lead with purpose.
                     </div>
                     <img
-                        className="w-[220px] h-[120px] sm:w-[350px] sm:h-[180px] md:w-[477px] md:h-[254px] rounded-[15px] sm:rounded-[18px] md:rounded-[20px] absolute -bottom-[50px] sm:-bottom-[70px] md:-bottom-[88px] right-0"
+                        className="w-[220px] h-[120px] sm:w-[350px] sm:h-[180px] md:w-[477px] md:h-[254px] rounded-[15px] sm:rounded-[18px] md:rounded-[20px] absolute -bottom-[50px] sm:-bottom-[70px] md:-bottom-[88px] right-2"
                         src="/images/about/transform.png"
                     />
                 </div>
@@ -196,10 +196,10 @@ function About() {
 
             <section className="pt-[100px] sm:pt-[150px] pb-[80px] sm:pb-[120px] max-w-[1080px] mx-auto">
                 <div className="max-w-[90%] md:max-w-[910px] w-full mx-auto">
-                    <div className="text-[#dddddd] text-[80px] sm:text-[150px] md:text-[200px] font-normal font-abhaya leading-[100px] sm:leading-[140px] md:leading-[160px] pl-4 sm:pl-[20px] md:pl-[40px]">
+                    <div className="text-[#dddddd] text-[70px]  md:text-[200px] font-normal font-abhaya leading-[100px] sm:leading-[140px] md:leading-[160px] sm:pl-[20px] md:pl-[40px]">
                         The
                     </div>
-                    <div className="text-[#dddddd] text-[80px] sm:text-[150px] md:text-[200px] font-normal font-abhaya leading-[100px] sm:leading-[140px] md:leading-[160px]">
+                    <div className="text-[#dddddd] text-[70px] md:text-[200px] font-normal font-abhaya leading-[100px] sm:leading-[140px] md:leading-[160px]">
                         Leadership
                     </div>
                 </div>
@@ -228,7 +228,7 @@ function About() {
                             />
                         </div>
                         <div className="text-black text-[22px] sm:text-[24px] md:text-[28px] font-normal font-abhaya leading-[26px] sm:leading-[30px] md:leading-[33.60px] mt-[20px] sm:mt-[35px] md:mt-[47px]">
-                            Apostle
+                            Pastor
                         </div>
                         <div className="text-black text-[26px] sm:text-[28px] md:text-[32px] font-extrabold font-abhaya leading-[32px] sm:leading-[34px] md:leading-[38.40px]">
                             Henry Ajiri-Evans
@@ -243,7 +243,7 @@ function About() {
                             />
                         </div>
                         <div className="text-black text-[22px] sm:text-[24px] md:text-[28px] font-normal font-abhaya leading-[26px] sm:leading-[30px] md:leading-[33.60px] mt-[20px] sm:mt-[35px] md:mt-[47px]">
-                            Apostle
+                            Pastor
                         </div>
                         <div className="text-black text-[26px] sm:text-[28px] md:text-[32px] font-extrabold font-abhaya leading-[32px] sm:leading-[34px] md:leading-[38.40px]">
                             Laura Ajiri-Evans
@@ -254,7 +254,7 @@ function About() {
 
             <section className=" bg-[#836bc1]/20 w-full">
                 <div className="container pt-[80px] sm:pt-[100px] md:pt-[110px] pb-[90px] sm:pb-[100px] md:pb-[121px]">
-                    <div className="text-[#d2c6e1] text-[100px]  md:text-[200px] font-normal font-abhaya leading-[80px]  md:leading-[160px]">
+                    <div className="text-[#d2c6e1] text-[70px]  md:text-[200px] font-normal font-abhaya leading-[80px]  md:leading-[160px]">
                         Who we are
                     </div>
 
@@ -297,17 +297,21 @@ function About() {
                         raise intercessors, prophets, evangelists, and teachers.
                     </div>
 
-                    <div className="max-w-full md:max-w-[825px] w-full h-[250px] sm:h-[350px] md:h-[418px] bg-black/40 rounded-[20px] sm:rounded-[25px] md:rounded-[30px] mx-auto overflow-hidden mt-[60px] sm:mt-[70px] md:mt-[86px]">
+                    <div className="max-w-full md:max-w-[825px] w-full h-[250px] sm:h-[350px] md:h-[418px] bg-black/40 rounded-[20px] sm:rounded-[25px] md:rounded-[30px] mx-auto overflow-hidden mt-[60px] sm:mt-[70px] md:mt-[86px] relative">
                         <img
                             src="/images/about/rename.png"
                             className="w-full h-full object-cover"
+                        />
+                        <img
+                            src="/images/playButton.png"
+                            className="absolute inset-0 m-auto cursor-pointer"
                         />
                     </div>
                 </div>
             </section>
 
             <section className="container max-w-[1080px] mx-auto pt-[80px] sm:pt-[100px] md:pt-[128px] flex flex-col md:flex-row items-center gap-x-[20px] md:gap-x-[40px] lg:gap-x-[91px] mb-[100px] sm:mb-[150px] md:mb-[226px]">
-                <div className="w-full md:max-w-[351px] h-[300px] sm:h-[400px] md:h-[485px] bg-[#836bc1] rounded-[20px] mx-auto">
+                <div className="w-full md:max-w-[351px] h-[300px] sm:h-[400px] md:h-[485px] bg-[#836bc1] rounded-[20px] mx-auto overflow-hidden">
                     <img
                         src="/images/about/about.png"
                         className="w-full h-full object-cover"
@@ -345,7 +349,7 @@ function About() {
 
             <section className="w-full bg-[#1e1767] py-[90px] mb-[78px]">
                 <div className="container relative md:pt-[177px]">
-                    <div className="text-[#c8c6e1]/20  text-[80px] md:text-[200px] font-normal font-abhaya leading-none md:leading-[160px] md:absolute top-0 left-0 mb-[57px] md:mb-0">
+                    <div className="text-[#c8c6e1]/20  text-[70px] md:text-[200px] font-normal font-abhaya leading-none md:leading-[160px] md:absolute top-0 left-0 mb-[57px] md:mb-0">
                         Statement <br />
                         of Faith
                     </div>
@@ -363,11 +367,20 @@ function About() {
                                 </Button>
                             </div>
                         </div>
-                        <div className="w-full md:w-1/2">
+                        <div className="w-full md:w-1/2 relative">
                             <img
                                 src="/images/about/statement.png"
                                 className="w-full h-full object-cover"
                             />
+                            <div className="absolute inset-0 m-auto flex items-center justify-center gap-2">
+                                <div className="text-center text-white text-3xl md:text-[40px] font-bold font-abhaya leading-[48px] cursor-pointer">
+                                    Listen Now
+                                </div>
+                                <img
+                                    src="/images/playButton.png"
+                                    className="cursor-pointer"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

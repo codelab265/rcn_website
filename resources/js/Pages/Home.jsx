@@ -20,7 +20,7 @@ function Home(props) {
             <Navbar />
             <Hero />
             <section
-                className="container mb-[80px] md:mt-[150px] md:mb-[120px]  relative"
+                className="container mb-[80px] mt-[70px]  md:mt-[150px] md:mb-[120px]  relative"
                 id="scroll"
             >
                 <div className="max-w-[1080px] mx-auto flex flex-col-reverse lg:flex-row gap-[20px] md:gap-[63px]">
@@ -53,13 +53,13 @@ function Home(props) {
                         />
                     </div>
                 </div>
-                <div class="absolute text-[#dddddd] text-[100px] md:text-[200px] lg:text-[300px] font-normal font-abhaya leading-[150px] sm:leading-[200px] md:leading-[240px] left-[10px] sm:left-[32px] -top-[12rem] sm:-top-[15rem] md:-top-[19rem]">
+                <div class="absolute text-[#dddddd] text-[100px] md:text-[200px] lg:text-[300px] font-normal font-abhaya leading-[150px] sm:leading-[200px] md:leading-[240px] left-[10px] sm:left-[32px] -top-[8rem] md:-top-[19rem]">
                     Believe
                 </div>
             </section>
 
             {programmes.length > 0 && <ProgramSlider programmes={programmes} />}
-            <section className="w-full mt-[80px] sm:mt-[100px] md:mt-[141px] md:pt-[80px] sm:pt-[100px] pb-[60px] sm:pb-[80px] md:pb-[98px] mb-[100px] sm:mb-[120px] md:mb-[161px] bg-[#150827] ">
+            <section className="w-full mt-[80px] md:mt-[141px] md:pt-[80px] pb-[110px] md:pb-[98px] mb-[60px] sm:mb-[120px] md:mb-[161px] bg-[#150827] ">
                 <div className="md:container relative">
                     <div className="w-full md:w-[70%] relative md:static">
                         <img
@@ -67,7 +67,7 @@ function Home(props) {
                             src="/images/seek.png"
                         />
                         <div class="absolute top-[60px] md:top-[101px] md:right-[235px] w-full md:max-w-[566px] space-y-4 md:space-y-[30px] z-10 px-5 md:px-0">
-                            <div className="text-white text-[32px] font-bold font-abhaya leading-[38.40px]">
+                            <div className="text-white text-2xl md:text-[32px] font-bold font-abhaya leading-[38.40px]">
                                 We seek only to see the coming of the King and
                                 His Kingdom until His reality is furnished in
                                 the hearts of the sons of men.
@@ -79,11 +79,11 @@ function Home(props) {
                                 of Bread with one another
                             </div>
                         </div>
-                        <div className="absolute bottom-[16px] right-[10px] md:right-[148px] text-[#c48efa]/20 text-[150px] md:text-[300px] font-normal font-abhaya leading-[100px] md:leading-[240px] z-10">
+                        <div className="absolute -bottom-[106px] md:bottom-[16px] right-[5px] md:right-[148px] text-[#c48efa]/20 text-[100px] md:text-[300px] font-normal font-abhaya leading-[100px] md:leading-[240px] z-10">
                             Belong
                         </div>
                     </div>
-                    {/* <div className="absolute bg-[#280D4A]/70 md:bg-[#280D4A]/40 w-full h-full top-0 left-0"></div> */}
+                    <div className="absolute md:hidden bg-[#280D4A]/70 md:bg-[#280D4A]/40 w-full h-full top-0 left-0"></div>
                 </div>
             </section>
             {upcomingEvent && (
@@ -91,7 +91,7 @@ function Home(props) {
                     <UpcomingEvent event={upcomingEvent} />
                 </section>
             )}
-            <section className="px-8 flex flex-col bg-[#f9f9f9] mb-[100px] sm:mb-[120px] md:mb-[140px] lg:mb-[158px]">
+            <section className="px-8 flex flex-col bg-[#f9f9f9] mb-[60px] md:mb-[140px] lg:mb-[158px]">
                 <h1 className="max-w-full text-[100px] sm:text-[160px] md:text-[220px] lg:text-[260px] font-abhaya font-normal text-[#DEDEDE]">
                     Become
                 </h1>

@@ -27,7 +27,7 @@ function Programmes(props) {
             <section className="h-[585px] md:h-[685px] w-full   relative bg-white">
                 <div className="container max-w-[1080px] mx-auto flex items-center h-full w-full">
                     <div className="max-w-[1080px] w-full mx-auto h-full relative">
-                        <div className="w-full md:max-w-[765px] text-black text-[54px] md:text-[80px] font-bold font-abhaya leading-[90px] absolute bottom-[139px] left-0 right-0 mx-auto lg:mx-0 text-center lg:text-left">
+                        <div className="w-full md:max-w-[765px] text-black text-[44px] md:text-[80px] font-bold font-abhaya md:leading-[90px] absolute bottom-[30px] md:bottom-[139px] left-0 right-0 mx-auto lg:mx-0 text-center lg:text-left">
                             Empowering believers for the advancement of the
                             Kingdom
                         </div>
@@ -69,13 +69,13 @@ function Programmes(props) {
                         territories in the spirit.
                     </div>
                     <img
-                        className="max-w-[80%] md:max-w-[637px] h-auto absolute -bottom-[112px] right-5 md:right-[124px]lg:right-[184px] rounded-[20px]"
+                        className="max-w-[80%] md:max-w-[637px] h-auto absolute -bottom-16 md:-bottom-[112px] right-5 md:right-[124px]lg:right-[184px] rounded-[20px]"
                         src="/images/programmes/id.png"
                     />
                 </div>
             </section>
-            <section className="pt-[221px] pb-[175px] container mx-auto">
-                <div className="text-[#dddddd] text-[64px] sm:text-[80px] md:text-[120px] lg:text-[200px] font-normal font-abhaya leading-[72px] sm:leading-[90px] md:leading-[120px] lg:leading-[160px] text-center">
+            <section className="pt-[175px] md:pt-[221px] pb-[175px] container mx-auto">
+                <div className="text-[#dddddd] text-[60px]  md:text-[120px] lg:text-[200px] font-normal font-abhaya leading-[72px] sm:leading-[90px] md:leading-[120px] lg:leading-[160px] text-center">
                     Programmes
                 </div>
                 <div className="max-w-[1080px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-[30px] sm:mt-[40px] md:mt-[50px] lg:mt-[57px]">
@@ -100,7 +100,7 @@ function Programmes(props) {
                             </AlertDialogTrigger>
                             <AlertDialogContent className="max-w-[1130px]">
                                 <AlertDialogHeader>
-                                    <AlertDialogDescription className="px-4  lg:px-[111px] lg:py-[90px]">
+                                    <AlertDialogDescription className="px-4 lg:p-[70px]">
                                         <div className="text-gray-300 hidden lg:block">
                                             Press ESC to close
                                         </div>

@@ -13,7 +13,7 @@ function Podcasts() {
             <Head title="Podcasts" />
             <Navbar />
             <section className="w-full pt-[209px] pb-[252px] bg-[#2fcff2] relative mb-[430px]">
-                <div className="w-full max-w-[1080px] mx-auto pl-[68px] flex flex-col z-10">
+                <div className="container max-w-[1080px] mx-auto md:pl-[68px] flex flex-col z-10">
                     <CommunityMenu />
                     <div
                         className="text-black font-bold font-abhaya mt-8 
