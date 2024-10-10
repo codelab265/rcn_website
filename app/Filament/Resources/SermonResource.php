@@ -33,7 +33,7 @@ class SermonResource extends Resource
                 Forms\Components\TextInput::make('pastor')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\FileUpload::make('image')
+                Forms\Components\FileUpload::make('images')
                     ->label('Pastor Image')
                     ->image()
                     ->required(),

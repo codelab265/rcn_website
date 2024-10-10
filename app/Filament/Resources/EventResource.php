@@ -41,7 +41,6 @@ class EventResource extends Resource
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('link')
                     ->label('Youtube Link (Optional)')
-
             ]);
     }
 
