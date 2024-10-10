@@ -34,6 +34,8 @@ class NewsResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->image()
                     ->required(),
+                Forms\Components\TextInput::make('link')
+                    ->label('Youtube Link (Optional)')
             ])->columns(1);
     }
 
