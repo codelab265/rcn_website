@@ -39,6 +39,8 @@ class EventResource extends Resource
                     ->image()
                     ->required()
                     ->columnSpanFull(),
+                Forms\Components\TextInput::make('link')
+                    ->label('Youtube Link (Optional)')
 
             ]);
     }

@@ -84,14 +84,14 @@ function Partnership() {
             </section>
             <section className="pt-[100px] md:pt-[200px] pb-[60px] md:pb-[104px] bg-[#2838ce] relative">
                 <div className="container ">
-                    <div className="w-[80%] sm:w-[600px] md:w-[750px] lg:w-[892px] h-[200px] sm:h-[300px] md:h-[369px] bg-[#a2a2a2] rounded-[20px] absolute left-0 right-0 mx-auto -top-[120px] sm:-top-[180px] md:-top-[230px]">
+                    <div className="w-[80%] sm:w-[600px] md:w-[750px] lg:w-[892px] h-[200px] sm:h-[300px] md:h-[369px] bg-[#a2a2a2] rounded-[20px] absolute left-0 right-0 mx-auto -top-[120px] sm:-top-[180px] md:-top-[230px] overflow-hidden">
                         <img
                             src="/images/partnership/partnership.png"
                             className="w-full h-full object-cover"
                         />
                     </div>
 
-                    <div className="text-[#5564ea] text-[60px] sm:text-[120px] md:text-[160px] lg:text-[200px] font-normal font-abhaya leading-[80px] sm:leading-[120px] md:leading-[140px] lg:leading-[160px]">
+                    <div className="text-[#5564ea] text-[70px] sm:text-[120px] md:text-[160px] lg:text-[200px] font-normal font-abhaya  md:leading-[140px] lg:leading-[160px]">
                         Our Mission
                     </div>
 
@@ -137,7 +137,7 @@ function Partnership() {
                         </div>
                         <PartnershipForm />
                     </div>
-                    <div className="w-full h-[250px] sm:h-[350px] md:w-[825px] md:h-[418px] bg-[#a2a2a2] rounded-[30px] mt-[50px] md:mt-[80px]">
+                    <div className="w-full h-[250px] sm:h-[350px] md:w-[825px] md:h-[418px] bg-[#a2a2a2] rounded-[30px] mt-[50px] md:mt-[80px] overflow-hidden">
                         <img
                             src="/images/partnership/partnership3.png"
                             className="w-full h-full object-cover"
@@ -148,7 +148,7 @@ function Partnership() {
 
             <section className="pt-[60px] md:pt-[103px] pb-[60px] md:pb-[116px] bg-[#ce2c28]/5">
                 <div className="container flex flex-col lg:flex-row space-y-[40px] lg:space-y-0 lg:space-x-[72px] relative">
-                    <div className="w-full lg:w-[455px] h-[300px] sm:h-[450px] md:h-[632px] bg-[#a2a2a2] rounded-[30px]">
+                    <div className="w-full lg:w-[455px] h-[300px] sm:h-[450px] md:h-[632px] bg-[#a2a2a2] rounded-[30px] overflow-hidden">
                         <img
                             src="/images/partnership/partnership4.png"
                             className="w-full h-full object-cover"
@@ -226,7 +226,7 @@ function Partnership() {
                         </div>
 
                         <div className="w-full md:max-w-[516px]">
-                            <div className="w-full h-[300px] sm:h-[400px] md:h-[544px] bg-[#a2a2a2] rounded-[30px]">
+                            <div className="w-full h-[300px] sm:h-[400px] md:h-[544px] bg-[#a2a2a2] rounded-[30px] overflow-hidden">
                                 <img
                                     src="/images/partnership/partnership5.png"
                                     className="w-full h-full object-cover"

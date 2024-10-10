@@ -23,6 +23,11 @@ function CommunityMenu() {
             link: "/community/podcasts",
             active: route().current("community.podcasts"),
         },
+        {
+            name: "Gallery",
+            link: "/community/gallery",
+            active: route().current("community.gallery"),
+        },
     ];
     return (
         <div className="flex flex-wrap items-center gap-5 z-10">

@@ -40,6 +40,7 @@ Route::group(['prefix' => 'community', 'as' => 'community.'], function () {
         return Inertia::render('community/Podcasts');
     })->name('podcasts');
     Route::get('/news', [CommunityController::class, 'news'])->name('news');
+    Route::get('/gallery', [CommunityController::class, 'gallery'])->name('gallery');
 });
 
 Route::get('/donate', function () {

@@ -26,6 +26,7 @@ function Contact() {
             preserveScroll: true,
         });
     };
+
     return (
         <MainLayout>
             <Head title="Contact" />

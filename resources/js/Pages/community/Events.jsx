@@ -11,7 +11,7 @@ import React, { useEffect } from "react";
 
 function Events(props) {
     const { events, upcomingEvent } = props;
-    console.log(events);
+
     return (
         <MainLayout>
             <Head title="Events" />
