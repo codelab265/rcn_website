@@ -1,3 +1,4 @@
+import Modal from "@/Components/Modal";
 import Navbar from "@/Components/Navbar";
 import Subcribe from "@/Components/Subcribe";
 import { Button } from "@/Components/ui/button";
@@ -6,6 +7,18 @@ import { Head } from "@inertiajs/react";
 import React from "react";
 
 function About() {
+    const [isOpen, setIsOpen] = React.useState(false);
+    const [openModal, setOpenModal] = React.useState(false);
+
+    const OpenModal = () => {
+        setOpenModal(true);
+    };
+
+    const closeModal = () => {
+        setOpenModal(false);
+        document.querySelector("audio").pause();
+    };
+
     return (
         <MainLayout>
             <Head title="About us" />
@@ -297,15 +310,30 @@ function About() {
                         raise intercessors, prophets, evangelists, and teachers.
                     </div>
 
-                    <div className="max-w-full md:max-w-[825px] w-full h-[250px] sm:h-[350px] md:h-[418px] bg-black/40 rounded-[20px] sm:rounded-[25px] md:rounded-[30px] mx-auto overflow-hidden mt-[60px] sm:mt-[70px] md:mt-[86px] relative">
-                        <img
-                            src="/images/about/rename.png"
-                            className="w-full h-full object-cover"
+                    <div className="max-w-full md:max-w-[825px] w-full h-[250px] sm:h-[350px] md:h-[518px] bg-black/40 rounded-[20px] sm:rounded-[25px] md:rounded-[30px] mx-auto overflow-hidden mt-[60px] sm:mt-[70px] md:mt-[86px] relative">
+                        <video
+                            src="/videos/dinna.mp4"
+                            className="w-full h-full object-cover video"
+                            style={{
+                                objectPosition: "80% 22%",
+                            }}
+                            autoPlay={false}
+                            controls
                         />
-                        <img
-                            src="/images/playButton.png"
-                            className="absolute inset-0 m-auto cursor-pointer"
-                        />
+
+                        {!isOpen && (
+                            <img
+                                src="/images/playButton.png"
+                                className="absolute inset-0 m-auto cursor-pointer"
+                                onClick={() => {
+                                    setIsOpen(true);
+                                    document
+                                        .querySelector("video")
+                                        .play()
+                                        .catch(() => {});
+                                }}
+                            />
+                        )}
                     </div>
                 </div>
             </section>
@@ -367,24 +395,36 @@ function About() {
                                 </Button>
                             </div>
                         </div>
-                        <div className="w-full md:w-1/2 relative">
+                        <div className="w-full md:w-1/2 relative bg-[#1e1767] overflow-hidden rounded-[30px]">
+                            <div className="absolute left-0 top-0 w-full h-full" />
                             <img
                                 src="/images/about/statement.png"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover mix-blend-luminosity bg-black/20"
                             />
                             <div className="absolute inset-0 m-auto flex items-center justify-center gap-2">
-                                <div className="text-center text-white text-3xl md:text-[40px] font-bold font-abhaya leading-[48px] cursor-pointer">
+                                <div
+                                    className="text-center text-white text-3xl md:text-[40px] font-bold font-abhaya leading-[48px] cursor-pointer"
+                                    onClick={OpenModal}
+                                >
                                     Listen Now
                                 </div>
                                 <img
                                     src="/images/playButton.png"
                                     className="cursor-pointer"
+                                    onClick={OpenModal}
                                 />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <Modal show={openModal} onClose={closeModal}>
+                <audio
+                    src="/audio/audio.m4a"
+                    controls
+                    className="md:w-full audio"
+                />
+            </Modal>
 
             <Subcribe />
         </MainLayout>
