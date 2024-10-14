@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Policy extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'link_name',
+        'title',
+        'description',
+    ];
 }
