@@ -35,8 +35,8 @@ function Events(props) {
                             Featured
                         </div>
                         <div className="max-w-full md:max-w-[783px] text-white text-[30px] md:text-[50px] font-bold font-abhaya leading-[36px] md:leading-[60px] mt-4 z-10">
-                            Our Spiritual Events They Bring Life Transformation
-                            By The Power of The Blood Of Jesus
+                            Our spiritual events they bring life transformation
+                            by the power of the blood of Jesus
                         </div>
                         <img
                             className="absolute bottom-0 right-0 w-full h-full object-cover opacity-30"
