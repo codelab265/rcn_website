@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Contact;
 use App\Models\Membership;
 use App\Models\Partnership;
+use App\Models\Policy;
 use App\Models\Programme;
 use App\Models\Subscriber;
 use Illuminate\Http\Request;
@@ -159,5 +160,11 @@ class MainController extends BaseController
     public function partnership()
     {
         return Inertia::render('Partnership', $this->data);
+    }
+
+    public function policy($id)
+    {
+        $policy = Policy::find($id);
+        return Inertia::render('Policy', ['policy' => $policy]);
     }
 }

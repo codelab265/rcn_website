@@ -41,7 +41,7 @@ Route::post('/unsubscribe', [MainController::class, 'unsubscribe'])->name('unsub
 
 Route::post('/membership', [MainController::class, 'membership'])->name('membership');
 Route::post('/partnership', [MainController::class, 'partnershipStore'])->name('partnership');
-
+Route::get('/policy/{id}', [MainController::class, 'policy'])->name('policy');
 
 Route::get('storage-link', function () {
     Artisan::call('storage:link');
