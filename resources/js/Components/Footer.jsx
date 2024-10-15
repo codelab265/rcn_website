@@ -125,7 +125,7 @@ function Footer({ policies, socialLinks }) {
                 <div className="flex flex-col gap-[5px]">
                     {policies.map((item) => (
                         <Link
-                            href={item.link_name}
+                            href={`/policy/${item.id}`}
                             className="text-black text-base font-normal font-inter leading-normal"
                             key={item.link_name}
                         >

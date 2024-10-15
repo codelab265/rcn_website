@@ -164,7 +164,7 @@ class MainController extends BaseController
 
     public function policy($id)
     {
-        $policy = Policy::find($id);
-        return Inertia::render('Policy', ['policy' => $policy]);
+        $this->policy = Policy::find($id);
+        return Inertia::render('Policy', $this->data);
     }
 }
