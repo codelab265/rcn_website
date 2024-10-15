@@ -320,8 +320,10 @@ function About(props) {
                             }}
                             autoPlay={false}
                             controls
+                            preload="auto"
+                            muted
+                            playsInline
                         />
-
                         {!isOpen && (
                             <img
                                 src="/images/playButton.png"
@@ -424,6 +426,9 @@ function About(props) {
                     src="/audio/statement.mp3"
                     controls
                     className="md:w-full audio"
+                    preload="auto"
+                    onCanPlayThrough={closeModal}
+                    onEnded={closeModal}
                 />
             </Modal>
 
