@@ -427,8 +427,6 @@ function About(props) {
                     controls
                     className="md:w-full audio"
                     preload="auto"
-                    onCanPlayThrough={closeModal}
-                    onEnded={closeModal}
                 />
             </Modal>
 
