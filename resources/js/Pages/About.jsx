@@ -6,7 +6,8 @@ import MainLayout from "@/Layouts/MainLayout";
 import { Head } from "@inertiajs/react";
 import React from "react";
 
-function About() {
+function About(props) {
+    const { policies } = props;
     const [isOpen, setIsOpen] = React.useState(false);
     const [openModal, setOpenModal] = React.useState(false);
 
@@ -20,7 +21,7 @@ function About() {
     };
 
     return (
-        <MainLayout>
+        <MainLayout policies={policies}>
             <Head title="About us" />
             <section className="w-full relative h-[600px] md:h-[700px] lg:h-[739px] overflow-hidden bg-white">
                 <Navbar />
@@ -420,7 +421,7 @@ function About() {
             </section>
             <Modal show={openModal} onClose={closeModal}>
                 <audio
-                    src="/audio/audio.m4a"
+                    src="/audio/statement.mp3"
                     controls
                     className="md:w-full audio"
                 />

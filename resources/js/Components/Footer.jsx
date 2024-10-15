@@ -1,7 +1,7 @@
 import { Link } from "@inertiajs/react";
 import React from "react";
 
-function Footer() {
+function Footer({ policies }) {
     const LinkItems = [
         {
             name: "About",
@@ -151,13 +151,13 @@ function Footer() {
                 </div>
                 <div className="w-full h-[2px] bg-[#d2d2d2] mt-[9px] mb-[25px]"></div>
                 <div className="flex flex-col gap-[5px]">
-                    {LegalLinks.map((item) => (
+                    {policies.map((item) => (
                         <Link
-                            href={item.link}
+                            href={item.link_name}
                             className="text-black text-base font-normal font-inter leading-normal"
-                            key={item.name}
+                            key={item.link_name}
                         >
-                            {item.name}
+                            {item.link_name}
                         </Link>
                     ))}
                 </div>

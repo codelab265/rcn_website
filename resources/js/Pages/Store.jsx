@@ -5,9 +5,9 @@ import MainLayout from "@/Layouts/MainLayout";
 import { Head } from "@inertiajs/react";
 import React from "react";
 
-function Store() {
+function Store({ policies }) {
     return (
-        <MainLayout>
+        <MainLayout policies={policies}>
             <Head title="Store" />
             <Navbar />
             <section className="w-full flex flex-col items-center justify-center pt-[100px] md:pt-[150px] lg:pt-[215px] pb-[120px] md:pb-[170px] lg:pb-[220px] relative">

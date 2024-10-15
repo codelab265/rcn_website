@@ -10,10 +10,10 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 
 function Gallery(props) {
-    const { galleries } = props;
-    console.log(galleries);
+    const { galleries, policies } = props;
+
     return (
-        <MainLayout>
+        <MainLayout policies={policies}>
             <Head title="Gallery" />
             <Navbar />
             <section className="w-full pt-[209px] pb-[252px] bg-gradient-to-b from-rose-300 to-white relative">

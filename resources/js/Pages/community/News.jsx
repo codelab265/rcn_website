@@ -8,9 +8,9 @@ import { Head } from "@inertiajs/react";
 import React from "react";
 
 function News(props) {
-    const { news } = props;
+    const { news, policies } = props;
     return (
-        <MainLayout>
+        <MainLayout policies={policies}>
             <Head title="News" />
             <Navbar />
             <section className="w-full pt-[209px] pb-[252px] bg-[#bee46c] relative">

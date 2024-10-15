@@ -19,13 +19,30 @@ class MainController extends BaseController
         return Inertia::render('Home', $this->data);
     }
 
+
+    public function about()
+    {
+        return Inertia::render('About', $this->data);
+    }
+
+    public function store()
+    {
+        return Inertia::render('Store', $this->data);
+    }
+
+
+
     public function programmes()
     {
         return Inertia::render('Programmes', $this->data);
     }
 
+    public function contact()
+    {
+        return Inertia::render('Contact', $this->data);
+    }
 
-    public function contact(Request $request)
+    public function contactStore(Request $request)
     {
         $request->validate([
             'name' => 'required',
@@ -100,7 +117,7 @@ class MainController extends BaseController
         return redirect()->back();
     }
 
-    public function partnership(Request $request)
+    public function partnershipStore(Request $request)
     {
         $request->validate([
             'name' => 'required',
@@ -137,5 +154,10 @@ class MainController extends BaseController
         ];
         Partnership::create($data);
         return redirect()->back();
+    }
+
+    public function partnership()
+    {
+        return Inertia::render('Partnership', $this->data);
     }
 }

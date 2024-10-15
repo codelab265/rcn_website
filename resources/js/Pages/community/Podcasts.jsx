@@ -7,9 +7,9 @@ import MainLayout from "@/Layouts/MainLayout";
 import { Head } from "@inertiajs/react";
 import React from "react";
 
-function Podcasts() {
+function Podcasts({ policies }) {
     return (
-        <MainLayout>
+        <MainLayout policies={policies}>
             <Head title="Podcasts" />
             <Navbar />
             <section className="w-full pt-[209px] pb-[252px] bg-[#2fcff2] relative mb-[430px]">

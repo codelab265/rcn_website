@@ -10,35 +10,23 @@ use Inertia\Inertia;
 
 Route::get('/', [MainController::class, 'home'])->name('home');
 
-Route::get('/about', function () {
-    return Inertia::render('About');
-})->name('about');
+Route::get('/about', [MainController::class, 'about'])->name('about');
 
-Route::get('/store', function () {
-    return Inertia::render('Store');
-})->name('store');
+Route::get('/store', [MainController::class, 'store'])->name('store');
 
 Route::get('/programmes', [MainController::class, 'programmes'])->name('programmes');
 
-Route::get('/contact', function () {
-    return Inertia::render('Contact');
-})->name('contact');
+Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 
-Route::post('/contact/store', [MainController::class, 'contact'])->name('contact.store');
+Route::post('/contact/store', [MainController::class, 'contactStore'])->name('contact.store');
 
-Route::get('/partnership', function () {
-    return Inertia::render('Partnership');
-})->name('partnership');
+Route::get('/partnership', [MainController::class, 'partnership'])->name('partnership');
 
 Route::group(['prefix' => 'community', 'as' => 'community.'], function () {
     Route::get('/events', [CommunityController::class, 'events'])->name('events');
-    Route::get('/sermons', function () {
-        return Inertia::render('community/Sermons');
-    })->name('sermons');
+    Route::get('/sermons', [CommunityController::class, 'sermons'])->name('sermons');
 
-    Route::get('/podcasts', function () {
-        return Inertia::render('community/Podcasts');
-    })->name('podcasts');
+    Route::get('/podcasts', [CommunityController::class, 'podcast'])->name('podcasts');
     Route::get('/news', [CommunityController::class, 'news'])->name('news');
     Route::get('/gallery', [CommunityController::class, 'gallery'])->name('gallery');
 });
@@ -52,7 +40,7 @@ Route::post('/subscribe', [MainController::class, 'subscribe'])->name('subscribe
 Route::post('/unsubscribe', [MainController::class, 'unsubscribe'])->name('unsubscribe');
 
 Route::post('/membership', [MainController::class, 'membership'])->name('membership');
-Route::post('/partnership', [MainController::class, 'partnership'])->name('partnership');
+Route::post('/partnership', [MainController::class, 'partnershipStore'])->name('partnership');
 
 
 Route::get('storage-link', function () {

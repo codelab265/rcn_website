@@ -19,9 +19,9 @@ import { SidebarClose } from "lucide-react";
 import UpcomingEvent from "@/Components/UpcomingEvent";
 
 function Programmes(props) {
-    const { programmes, upcomingEvent } = props;
+    const { programmes, upcomingEvent, policies } = props;
     return (
-        <MainLayout>
+        <MainLayout policies={policies}>
             <Head title="Programmes" />
             <Navbar />
             <section className="h-[585px] md:h-[685px] w-full   relative bg-white">

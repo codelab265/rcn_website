@@ -10,10 +10,10 @@ import axios from "axios";
 import React, { useEffect } from "react";
 
 function Events(props) {
-    const { events, upcomingEvent } = props;
+    const { events, upcomingEvent, policies } = props;
 
     return (
-        <MainLayout>
+        <MainLayout policies={policies}>
             <Head title="Events" />
             <Navbar />
             <section className="w-full pt-[209px] pb-[252px] bg-[#ffd200] relative">

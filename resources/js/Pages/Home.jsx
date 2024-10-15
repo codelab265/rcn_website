@@ -12,10 +12,10 @@ import { Head, Link } from "@inertiajs/react";
 import React from "react";
 
 function Home(props) {
-    const { programmes, upcomingEvent } = props;
+    const { programmes, upcomingEvent, policies } = props;
 
     return (
-        <MainLayout>
+        <MainLayout policies={policies}>
             <Head title="Home" />
             <Navbar />
             <Hero />
