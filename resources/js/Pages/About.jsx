@@ -21,7 +21,7 @@ function About(props) {
     };
 
     return (
-        <MainLayout policies={policies}>
+        <MainLayout data={props}>
             <Head title="About us" />
             <section className="w-full relative h-[600px] md:h-[700px] lg:h-[739px] overflow-hidden bg-white">
                 <Navbar />

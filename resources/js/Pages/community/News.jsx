@@ -10,7 +10,7 @@ import React from "react";
 function News(props) {
     const { news, policies } = props;
     return (
-        <MainLayout policies={policies}>
+        <MainLayout data={props}>
             <Head title="News" />
             <Navbar />
             <section className="w-full pt-[209px] pb-[252px] bg-[#bee46c] relative">

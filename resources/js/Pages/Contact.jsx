@@ -8,7 +8,7 @@ import { Head, useForm } from "@inertiajs/react";
 import React from "react";
 import { toast } from "sonner";
 
-function Contact({ policies }) {
+function Contact(props) {
     const { data, setData, post, processing, errors, reset } = useForm({
         name: "",
         email: "",
@@ -28,7 +28,7 @@ function Contact({ policies }) {
     };
 
     return (
-        <MainLayout policies={policies}>
+        <MainLayout data={props}>
             <Head title="Contact" />
             <Navbar />
             <section className="container relative w-full flex flex-col pt-[178px] pb-[119px]">

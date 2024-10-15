@@ -13,7 +13,7 @@ function Gallery(props) {
     const { galleries, policies } = props;
 
     return (
-        <MainLayout policies={policies}>
+        <MainLayout data={props}>
             <Head title="Gallery" />
             <Navbar />
             <section className="w-full pt-[209px] pb-[252px] bg-gradient-to-b from-rose-300 to-white relative">

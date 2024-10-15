@@ -15,7 +15,7 @@ function Home(props) {
     const { programmes, upcomingEvent, policies } = props;
 
     return (
-        <MainLayout policies={policies}>
+        <MainLayout data={props}>
             <Head title="Home" />
             <Navbar />
             <Hero />

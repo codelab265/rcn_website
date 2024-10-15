@@ -6,9 +6,9 @@ import MainLayout from "@/Layouts/MainLayout";
 import { Head } from "@inertiajs/react";
 import React from "react";
 
-function Partnership({ policies }) {
+function Partnership(props) {
     return (
-        <MainLayout policies={policies}>
+        <MainLayout data={props}>
             <Head title="Partnership" />
             <Navbar />
             <section className="flex items-center justify-center h-[710px] md:h-[910px] w-full   relative bg-white">

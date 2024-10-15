@@ -8,9 +8,9 @@ import { Head } from "@inertiajs/react";
 import { Search } from "lucide-react";
 import React from "react";
 
-function Sermons({ policies }) {
+function Sermons(props) {
     return (
-        <MainLayout policies={policies}>
+        <MainLayout data={props}>
             <Head title="Sermons" />
             <Navbar />
             <section className="w-full pt-[209px] bg-purple-400 relative">

@@ -21,7 +21,7 @@ import UpcomingEvent from "@/Components/UpcomingEvent";
 function Programmes(props) {
     const { programmes, upcomingEvent, policies } = props;
     return (
-        <MainLayout policies={policies}>
+        <MainLayout data={props}>
             <Head title="Programmes" />
             <Navbar />
             <section className="h-[585px] md:h-[685px] w-full   relative bg-white">

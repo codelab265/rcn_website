@@ -13,7 +13,7 @@ function Events(props) {
     const { events, upcomingEvent, policies } = props;
 
     return (
-        <MainLayout policies={policies}>
+        <MainLayout data={props}>
             <Head title="Events" />
             <Navbar />
             <section className="w-full pt-[209px] pb-[252px] bg-[#ffd200] relative">

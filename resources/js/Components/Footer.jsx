@@ -1,7 +1,7 @@
 import { Link } from "@inertiajs/react";
 import React from "react";
 
-function Footer({ policies }) {
+function Footer({ policies, socialLinks }) {
     const LinkItems = [
         {
             name: "About",
@@ -35,35 +35,6 @@ function Footer({ policies }) {
             name: "Contact Us",
             link: "/contact",
             active: route().current("contact"),
-        },
-    ];
-
-    const SocialLinks = [
-        {
-            name: "YouTube",
-            link: "https://www.youtube.com/channel/UCpZ9yZQbY4N6w9oCwV6c5Rg",
-        },
-
-        {
-            name: "Facebook",
-            link: "https://www.facebook.com/rcnlondon",
-        },
-        {
-            name: "Instagram",
-            link: "https://www.instagram.com/rcnlondon/",
-        },
-        {
-            name: "TikTok",
-            link: "https://www.tiktok.com/@rcnlondon",
-        },
-        {
-            name: "Telegram",
-            link: "https://t.me/rcnlondon",
-        },
-
-        {
-            name: "X",
-            link: "https://x.com",
         },
     ];
 
@@ -134,14 +105,15 @@ function Footer({ policies }) {
                 </div>
                 <div className="w-full h-[2px] bg-[#d2d2d2] mt-[9px] mb-[25px]"></div>
                 <div className="flex flex-col gap-[5px]">
-                    {SocialLinks.map((item) => (
-                        <Link
+                    {socialLinks.map((item) => (
+                        <a
                             href={item.link}
                             className="text-black text-base font-normal font-inter leading-normal"
                             key={item.name}
+                            target="_blank"
                         >
                             {item.name}
-                        </Link>
+                        </a>
                     ))}
                 </div>
             </div>
