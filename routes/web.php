@@ -8,19 +8,19 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', [MainController::class, 'home'])->name('home');
+Route::get('/', [MainController::class, 'home'])->name('home')->middleware('cache.headers:public;max_age=2628000;etag');
 
-Route::get('/about', [MainController::class, 'about'])->name('about');
+Route::get('/about', [MainController::class, 'about'])->name('about')->middleware('cache.headers:public;max_age=2628000;etag');
 
 Route::get('/store', [MainController::class, 'store'])->name('store');
 
 Route::get('/programmes', [MainController::class, 'programmes'])->name('programmes');
 
-Route::get('/contact', [MainController::class, 'contact'])->name('contact');
+Route::get('/contact', [MainController::class, 'contact'])->name('contact')->middleware('cache.headers:public;max_age=2628000;etag');
 
 Route::post('/contact/store', [MainController::class, 'contactStore'])->name('contact.store');
 
-Route::get('/partnership', [MainController::class, 'partnership'])->name('partnership');
+Route::get('/partnership', [MainController::class, 'partnership'])->name('partnership')->middleware('cache.headers:public;max_age=2628000;etag');
 
 Route::group(['prefix' => 'community', 'as' => 'community.'], function () {
     Route::get('/events', [CommunityController::class, 'events'])->name('events');
