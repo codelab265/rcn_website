@@ -251,7 +251,7 @@ function About(props) {
                     <div className="flex flex-col items-center">
                         <div className="w-[150px] h-[150px] sm:w-[175px] sm:h-[175px] md:w-[225px] md:h-[225px] bg-[#836bc1] rounded-full overflow-hidden">
                             <img
-                                src="/images/about/pastor2.png"
+                                src="/images/about/laura.jpg"
                                 className="w-full h-full object-cover"
                                 alt=""
                             />

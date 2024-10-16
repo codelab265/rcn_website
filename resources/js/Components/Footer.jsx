@@ -70,7 +70,7 @@ function Footer({ policies, socialLinks }) {
         },
     ];
     return (
-        <footer className="container grid grid-cols-2 lg:grid-cols-4 pt-[82px] pb-[77px] bg-[#f9f9f9] gap-10 md:gap-[60px]">
+        <footer className="container grid grid-cols-2 lg:grid-cols-5 pt-[82px] pb-[77px] bg-[#f9f9f9] gap-10 md:gap-[60px]">
             <div className="flex flex-col justify-between">
                 <img
                     src="/images/logo.png"
@@ -133,6 +133,17 @@ function Footer({ policies, socialLinks }) {
                         </Link>
                     ))}
                 </div>
+            </div>
+            <div className="flex flex-col">
+                <div className="text-black text-xl font-bold font-abhaya leading-normal">
+                    DONATE
+                </div>
+                <div className="w-full h-[2px] bg-[#d2d2d2] mt-[9px] mb-[25px]"></div>
+                <img
+                    src="/images/qrcode.png"
+                    className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] md:w-[150px] md:h-[180px]"
+                    alt="Logo"
+                />
             </div>
         </footer>
     );
