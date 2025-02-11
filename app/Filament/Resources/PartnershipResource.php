@@ -21,6 +21,7 @@ class PartnershipResource extends Resource
     protected static ?string $model = Partnership::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-clipboard-document';
+    protected static ?string $navigationGroup = 'Forms Management';
 
     public static function form(Form $form): Form
     {
@@ -63,10 +64,8 @@ class PartnershipResource extends Resource
                     TextEntry::make('city'),
                     TextEntry::make('communication_mode'),
                     TextEntry::make('partnership_frequency'),
-                    KeyValueEntry::make('form_of_partnership')
-
-                        ->keyLabel('')
-                        ->valueLabel('form of partnership'),
+                    TextEntry::make('form_of_partnership')
+                        ->listWithLineBreaks(),
                     TextEntry::make('month_of_commencement'),
                     TextEntry::make('currency'),
                     TextEntry::make('whatsapp')

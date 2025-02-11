@@ -7,7 +7,8 @@ import MainLayout from "@/Layouts/MainLayout";
 import { Head } from "@inertiajs/react";
 import React from "react";
 
-function News() {
+function News(props) {
+    const { news } = props;
     return (
         <MainLayout>
             <Head title="News" />
@@ -46,15 +47,17 @@ function News() {
                     Recent
                 </div>
                 <div className="w-full max-w-[1080px] mx-auto grid grid-cols-12 gap-x-[30px] gap-y-[57px] mt-10">
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
-                        <Event />
+                    {news.data.map((item) => (
+                        <Event event={item} />
                     ))}
                 </div>
-                <div className="flex justify-center mt-[93px] mb-[109px]">
-                    <Button className="rounded-[100px] bg-black text-sm md:text-base font-inter font-semibold mt-6 md:mt-9 p-5 h-[52px]">
-                        Load More
-                    </Button>
-                </div>
+                {news.data.length > 0 && (
+                    <div className="flex justify-center mt-[93px] mb-[109px]">
+                        <Button className="rounded-[100px] bg-black text-sm md:text-base font-inter font-semibold mt-6 md:mt-9 p-5 h-[52px]">
+                            Load More
+                        </Button>
+                    </div>
+                )}
             </section>
             <Subcribe />
         </MainLayout>

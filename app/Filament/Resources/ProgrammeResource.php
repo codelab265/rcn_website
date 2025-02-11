@@ -26,27 +26,33 @@ class ProgrammeResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('description')
+                Forms\Components\Textarea::make('description')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\FileUpload::make('image')
-                    ->image()
-                    ->required(),
                 Forms\Components\TextInput::make('time')
                     ->required()
                     ->maxLength(255),
-            ]);
+                Forms\Components\FileUpload::make('image')
+                    ->directory('programmes')
+                    ->image()
+                    ->required(),
+            ])
+            ->columns(1)
+        ;
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
+                Tables\Columns\ImageColumn::make('image')
+                    ->circular(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('description')
+                    ->words(6)
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
+
                 Tables\Columns\TextColumn::make('time')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
@@ -62,6 +68,7 @@ class ProgrammeResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])

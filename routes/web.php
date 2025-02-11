@@ -1,49 +1,34 @@
 <?php
 
+use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('Home');
-})->name('home');
+Route::get('/', [MainController::class, 'home'])->name('home')->middleware('cache.headers:public;max_age=2628000;etag');
 
-Route::get('/about', function () {
-    return Inertia::render('About');
-})->name('about');
+Route::get('/about', [MainController::class, 'about'])->name('about')->middleware('cache.headers:public;max_age=2628000;etag');
 
-Route::get('/store', function () {
-    return Inertia::render('Store');
-})->name('store');
+Route::get('/store', [MainController::class, 'store'])->name('store');
 
-Route::get('/programmes', function () {
-    return Inertia::render('Programmes');
-})->name('programmes');
+Route::get('/programmes', [MainController::class, 'programmes'])->name('programmes');
 
-Route::get('/contact', function () {
-    return Inertia::render('Contact');
-})->name('contact');
-Route::post('/contact/store', [MainController::class, 'contact'])->name('contact.store');
+Route::get('/contact', [MainController::class, 'contact'])->name('contact')->middleware('cache.headers:public;max_age=2628000;etag');
 
-Route::get('/partnership', function () {
-    return Inertia::render('Partnership');
-})->name('partnership');
+Route::post('/contact/store', [MainController::class, 'contactStore'])->name('contact.store');
+
+Route::get('/partnership', [MainController::class, 'partnership'])->name('partnership')->middleware('cache.headers:public;max_age=2628000;etag');
 
 Route::group(['prefix' => 'community', 'as' => 'community.'], function () {
-    Route::get('/events', function () {
-        return Inertia::render('community/Events');
-    })->name('events');
-    Route::get('/sermons', function () {
-        return Inertia::render('community/Sermons');
-    })->name('sermons');
-    Route::get('/podcasts', function () {
-        return Inertia::render('community/Podcasts');
-    })->name('podcasts');
-    Route::get('/news', function () {
-        return Inertia::render('community/News');
-    })->name('news');
+    Route::get('/events', [CommunityController::class, 'events'])->name('events');
+    Route::get('/sermons', [CommunityController::class, 'sermons'])->name('sermons');
+
+    Route::get('/podcasts', [CommunityController::class, 'podcast'])->name('podcasts');
+    Route::get('/news', [CommunityController::class, 'news'])->name('news');
+    Route::get('/gallery', [CommunityController::class, 'gallery'])->name('gallery');
 });
 
 Route::get('/donate', function () {
@@ -55,4 +40,13 @@ Route::post('/subscribe', [MainController::class, 'subscribe'])->name('subscribe
 Route::post('/unsubscribe', [MainController::class, 'unsubscribe'])->name('unsubscribe');
 
 Route::post('/membership', [MainController::class, 'membership'])->name('membership');
-Route::post('/partnership', [MainController::class, 'partnership'])->name('partnership');
+Route::post('/partnership', [MainController::class, 'partnershipStore'])->name('partnership');
+Route::get('/policy/{id}', [MainController::class, 'policy'])->name('policy');
+
+Route::get('storage-link', function () {
+    Artisan::call('storage:link');
+});
+
+Route::get('/migrate', function () {
+    Artisan::call('migrate');
+});

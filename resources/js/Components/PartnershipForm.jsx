@@ -178,6 +178,11 @@ function PartnershipForm() {
                 setOpen(false);
                 toast.success("Membership form submitted successfully");
             },
+            onError: () => {
+                toast.error(
+                    "An error occurred, Please check if all required fields are filled"
+                );
+            },
             preserveScroll: true,
         });
     };
@@ -185,7 +190,7 @@ function PartnershipForm() {
     return (
         <div className="">
             <Button
-                className="rounded-full py-4 px-6 font-Gilroy font-semibold text-sm sm:text-base"
+                className="rounded-full py-4 px-6 font-Gilroy font-semibold text-sm sm:text-base mt-[30px]"
                 onClick={() => setOpen(true)}
             >
                 Become a Partner

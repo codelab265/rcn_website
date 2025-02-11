@@ -40,6 +40,7 @@ class AdminPanelProvider extends PanelProvider
                 /*  Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class, */])
             ->spa()
+            ->globalSearch()
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
