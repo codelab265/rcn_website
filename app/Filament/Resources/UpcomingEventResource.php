@@ -27,8 +27,12 @@ class UpcomingEventResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
+<<<<<<< HEAD
                 Forms\Components\DatePicker::make('event_date')
                     ->minDate(now())
+=======
+                Forms\Components\TextInput::make('event_date')
+>>>>>>> 8b70df998462ebe65274c02afa8594dab72c6aad
                     ->required(),
                 Forms\Components\Textarea::make('description')->columnSpanFull(),
                 Forms\Components\TextInput::make('link')

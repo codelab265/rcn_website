@@ -18,7 +18,11 @@ class MainController extends BaseController
 
     public function home()
     {
+<<<<<<< HEAD
         $this->events = EventResource::collection(Event::query()->latest()->take(3)->get());
+=======
+
+>>>>>>> 8b70df998462ebe65274c02afa8594dab72c6aad
         return Inertia::render('Home', $this->data);
     }
 

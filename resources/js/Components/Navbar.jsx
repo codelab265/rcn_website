@@ -72,6 +72,7 @@ function Navbar() {
                                 ? "text-black font-black"
                                 : "text-black/90 font-semibold"
                         }`}
+                        key={item.name}
                     >
                         {item.name}
                     </Link>
@@ -97,6 +98,7 @@ function Navbar() {
                                                 ? "text-black font-bold"
                                                 : "text-black font-semibold"
                                         }`}
+                                        key={item.name}
                                     >
                                         {item.name}
                                     </Link>

@@ -8,13 +8,17 @@ import { Head } from "@inertiajs/react";
 import React from "react";
 
 function News(props) {
+<<<<<<< HEAD
     const { news } = props;
+=======
+    const { news, policies } = props;
+>>>>>>> 8b70df998462ebe65274c02afa8594dab72c6aad
     return (
-        <MainLayout>
+        <MainLayout data={props}>
             <Head title="News" />
             <Navbar />
             <section className="w-full pt-[209px] pb-[252px] bg-[#bee46c] relative">
-                <div className="w-full max-w-[1080px] mx-auto pl-[68px] flex flex-col z-10">
+                <div className="container max-w-[1080px] mx-auto md:pl-[68px] flex flex-col z-10">
                     <CommunityMenu />
                     <div
                         className="text-black font-bold font-abhaya mt-8 
@@ -26,13 +30,19 @@ function News(props) {
                         News
                     </div>
                 </div>
-                <div className="left-6 right-6  max-w-[1080px] h-[300px] md:h-[549px] bg-[#a2a2a2] rounded-[30px] mx-auto absolute -bottom-[137px] md:-bottom-[337px] flex flex-col justify-end py-8 md:py-[53px] px-6 md:px-[68px] -z-0">
-                    <div className="text-[#717171] text-[24px] md:text-[32px] font-bold font-abhaya leading-[30px] md:leading-[38.40px]">
-                        Featured
-                    </div>
-                    <div className="max-w-full md:max-w-[783px] text-black text-[30px] md:text-[50px] font-bold font-abhaya leading-[36px] md:leading-[60px] mt-4">
-                        Nulla ut dignissim nibh malesuada. Et amet vitae massa
-                        nunc.
+                <div className="left-6 right-6 max-w-[1080px] h-[300px] md:h-[549px] bg-black rounded-[30px] mx-auto absolute -bottom-[137px] md:-bottom-[337px]  -z-0 overflow-hidden">
+                    <div className="w-full h-full flex flex-col justify-end py-8 md:py-[53px] px-6 md:px-[68px] relative">
+                        {/* <div className="text-[#717171] text-[24px] md:text-[32px] font-bold font-abhaya leading-[30px] md:leading-[38.40px] z-10">
+                            Featured
+                        </div>
+                        <div className="max-w-full md:max-w-[783px] text-white text-[30px] md:text-[50px] font-bold font-abhaya leading-[36px] md:leading-[60px] mt-4 z-10">
+                            Nulla ut dignissim nibh malesuada. Et amet vitae
+                            massa nunc.
+                        </div> */}
+                        <img
+                            className="absolute bottom-0 right-0 w-full h-full object-cover"
+                            src="/images/news.png"
+                        />
                     </div>
                 </div>
             </section>

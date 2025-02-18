@@ -8,7 +8,7 @@ import { Head, useForm } from "@inertiajs/react";
 import React from "react";
 import { toast } from "sonner";
 
-function Contact() {
+function Contact(props) {
     const { data, setData, post, processing, errors, reset } = useForm({
         name: "",
         email: "",
@@ -26,8 +26,9 @@ function Contact() {
             preserveScroll: true,
         });
     };
+
     return (
-        <MainLayout>
+        <MainLayout data={props}>
             <Head title="Contact" />
             <Navbar />
             <section className="container relative w-full flex flex-col pt-[178px] pb-[119px]">
@@ -111,22 +112,30 @@ function Contact() {
             </section>
             <section className="container max-w-[1080px] w-full h-[527px] mx-auto flex items-center relative mb-[172px]">
                 <div className="md:max-w-[353px] w-full bg-[#df6426] rounded-[30px] flex flex-col items-center justify-center gap-8 p-10 z-10">
-                    <div className="w-full md:w-[255px] h-[72px] bg-white rounded-2xl flex items-center px-6 gap-3">
-                        <img src="/images/contact/email.png" alt="" srcset="" />
-                        <div className="text-black text-lg font-normal font-inter leading-[27px]">
-                            info@rcnlondon.uk
+                    <a href="mailto:info@rcnlondon.uk">
+                        <div className="w-full md:w-[255px] h-[72px] bg-white rounded-2xl flex items-center px-6 gap-3">
+                            <img
+                                src="/images/contact/email.png"
+                                alt=""
+                                srcset=""
+                            />
+                            <div className="text-black text-lg font-normal font-inter leading-[27px]">
+                                info@rcnlondon.uk
+                            </div>
                         </div>
-                    </div>
-                    <div className="w-full md:w-[255px] h-[72px] bg-white rounded-2xl flex items-center px-6 gap-3">
-                        <img
-                            src="/images/contact/whatsapp.png"
-                            alt=""
-                            srcset=""
-                        />
-                        <div className="text-black text-lg font-normal font-inter leading-[27px]">
-                            +447563305204
+                    </a>
+                    <a href="whatsapp://send?phone=+447563305204">
+                        <div className="w-full md:w-[255px] h-[72px] bg-white rounded-2xl flex items-center px-6 gap-3">
+                            <img
+                                src="/images/contact/whatsapp.png"
+                                alt=""
+                                srcset=""
+                            />
+                            <div className="text-black text-lg font-normal font-inter leading-[27px]">
+                                +447563305204
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div className="w-full md:w-[255px] flex gap-3 ">
                         <img
                             src="/images/contact/location.png"
