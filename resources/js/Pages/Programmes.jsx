@@ -57,7 +57,7 @@ function Programmes(props) {
                 </div>
             </section>
             {upcomingEvent && (
-                <section className="w-full py-[109px] sm:py-[80px] md:py-[90px] lg:py-[109px]">
+                <section className="w-full py-[109px] sm:py-[80px] md:py-[90px] lg:py-[109px] bg-gray-50">
                     <UpcomingEvent event={upcomingEvent} />
                 </section>
             )}

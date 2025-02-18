@@ -57,9 +57,13 @@ function Home(props) {
                     Believe
                 </div>
             </section>
-
+            {upcomingEvent && (
+                <section className="w-full py-[109px] sm:py-[80px] md:py-[90px] lg:py-[109px] bg-gray-50">
+                    <UpcomingEvent event={upcomingEvent} />
+                </section>
+            )}
             {programmes.length > 0 && <ProgramSlider programmes={programmes} />}
-            
+
             <section className="w-full mt-[80px] sm:mt-[100px] md:mt-[141px] md:pt-[80px] sm:pt-[100px] pb-[60px] sm:pb-[80px] md:pb-[98px] mb-[100px] sm:mb-[120px] md:mb-[161px] bg-[#150827] ">
                 <div className="md:container relative">
                     <div className="w-full md:w-[70%] relative md:static">
@@ -87,11 +91,7 @@ function Home(props) {
                     {/* <div className="absolute bg-[#280D4A]/70 md:bg-[#280D4A]/40 w-full h-full top-0 left-0"></div> */}
                 </div>
             </section>
-            {upcomingEvent && (
-                <section className="w-full py-[109px] sm:py-[80px] md:py-[90px] lg:py-[109px]">
-                    <UpcomingEvent event={upcomingEvent} />
-                </section>
-            )}
+
             <section className="px-8 flex flex-col bg-[#f9f9f9] mb-[100px] sm:mb-[120px] md:mb-[140px] lg:mb-[158px]">
                 <h1 className="max-w-full text-[100px] sm:text-[160px] md:text-[220px] lg:text-[260px] font-abhaya font-normal text-[#DEDEDE]">
                     Become

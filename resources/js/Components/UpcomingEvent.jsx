@@ -5,7 +5,7 @@ import { Link } from "@inertiajs/react";
 function UpcomingEvent({ event }) {
     let upcomingEvent = event?.data;
     return (
-        <div className="container flex flex-col lg:flex-row lg:gap-[66px]">
+        <div className="container flex flex-col lg:flex-row lg:gap-[66px] bg-gray-50">
             <div className="w-full lg:w-1/2 lg:pl-[39px] relative">
                 <img
                     className="max-w-full w-full rounded-[30px]"
