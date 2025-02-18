@@ -2,12 +2,6 @@
 
 namespace App\Providers;
 
-use App\Models\Contact;
-use App\Models\Membership;
-use App\Models\Partnership;
-use App\Observers\ContactObserver;
-use App\Observers\MembershipObserver;
-use App\Observers\PartnershipObserver;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,5 +17,8 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void {}
+    public function boot(): void
+    {
+        //
+    }
 }

@@ -63,7 +63,6 @@ function Home(props) {
                 </section>
             )}
             {programmes.length > 0 && <ProgramSlider programmes={programmes} />}
-
             <section className="w-full mt-[80px] sm:mt-[100px] md:mt-[141px] md:pt-[80px] sm:pt-[100px] pb-[60px] sm:pb-[80px] md:pb-[98px] mb-[100px] sm:mb-[120px] md:mb-[161px] bg-[#150827] ">
                 <div className="md:container relative">
                     <div className="w-full md:w-[70%] relative md:static">

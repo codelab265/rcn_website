@@ -8,13 +8,13 @@ import { Head } from "@inertiajs/react";
 import { Search } from "lucide-react";
 import React from "react";
 
-function Sermons(props) {
+function Sermons() {
     return (
-        <MainLayout data={props}>
+        <MainLayout>
             <Head title="Sermons" />
             <Navbar />
             <section className="w-full pt-[209px] bg-purple-400 relative">
-                <div className="container w-full max-w-[1080px] mx-auto md:pl-[68px] flex flex-col z-10">
+                <div className="container w-full max-w-[1080px] mx-auto pl-[68px] flex flex-col z-10">
                     <CommunityMenu />
                     <div
                         className="text-black font-bold font-abhaya mt-8 

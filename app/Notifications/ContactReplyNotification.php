@@ -3,14 +3,11 @@
 namespace App\Notifications;
 
 use App\Models\Contact;
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class ContactReplyNotification extends Notification implements ShouldQueue
+class ContactReplyNotification extends Notification
 {
-    use Queueable;
 
     public function __construct(
         protected Contact $contact,

@@ -12,12 +12,6 @@ function UpcomingEvent({ event }) {
                     src={`/storage/${upcomingEvent.image}`}
                     alt="Event"
                 />
-                <div className="w-full h-full left-0 top-0 absolute flex items-center justify-center px-16">
-                    <div className="text-center text-white text-8xl font-bold font-abhaya leading-[72px] line-clamp-4">
-                        Next <br />
-                        {upcomingEvent.title} <br />
-                    </div>
-                </div>
             </div>
             <div className="w-full lg:w-1/2 flex flex-col justify-center">
                 <div className="text-black text-[28px] md:text-[32px] font-normal font-abhaya leading-relaxed mb-[30px] ">

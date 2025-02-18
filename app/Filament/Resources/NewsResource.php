@@ -35,8 +35,8 @@ class NewsResource extends Resource
                     ->image()
                     ->required(),
                 Forms\Components\TextInput::make('link')
-
-                    ->label('Youtube Link (Optional)')
+                    ->label('Youtube Link'),
+                    
             ])->columns(1);
     }
 
