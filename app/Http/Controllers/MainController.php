@@ -10,7 +10,11 @@ use App\Models\Partnership;
 use App\Models\Policy;
 use App\Models\Programme;
 use App\Models\Subscriber;
+use App\Notifications\NewContactMessageNotification;
+use App\Notifications\NewMembershipNotification;
+use App\Notifications\NewPartnershipNotification;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 use Inertia\Inertia;
 
 class MainController extends BaseController
@@ -59,7 +63,9 @@ class MainController extends BaseController
             'message' => $request->message
         ];
 
-        Contact::create($data);
+        $contact = Contact::create($data);
+        Notification::route('mail', 'mphatsomlenga1@gmail.com')
+            ->notify(new NewContactMessageNotification($contact));
         return redirect()->back();
     }
     public function subscribe(Request $request)
@@ -116,7 +122,9 @@ class MainController extends BaseController
             'whatsapp' => $request->whatsapp,
             'agreement' => $request->agreement
         ];
-        Membership::create($data);
+        $member = Membership::create($data);
+        Notification::route('mail', 'mphatsomlenga1@gmail.com')
+            ->notify(new NewMembershipNotification($member));
         return redirect()->back();
     }
 
@@ -155,7 +163,9 @@ class MainController extends BaseController
             'month_of_commencement' => $request->month_of_commencement,
             'partnership_frequency' => $request->partnership_frequency
         ];
-        Partnership::create($data);
+        $partnership = Partnership::create($data);
+        Notification::route('mail', 'mphatsomlenga1@gmail.com')
+            ->notify(new NewPartnershipNotification($partnership));
         return redirect()->back();
     }
 

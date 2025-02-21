@@ -11,7 +11,7 @@ class MembershipObserver
     public function created(Membership $membership): void
     {
         // Send notification to admin
-        Notification::route('mail', 'mphatsomlenga1@gmail.com')
+        Notification::route('mail', config('mail.admin_email', env('ADMIN_EMAIL')))
             ->notify(new NewMembershipNotification($membership));
     }
 }
