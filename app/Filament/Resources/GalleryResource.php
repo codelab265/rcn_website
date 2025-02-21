@@ -7,6 +7,8 @@ use App\Filament\Resources\GalleryResource\RelationManagers;
 use App\Models\Gallery;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Infolists\Components\ImageEntry;
+use Filament\Infolists\Components\TextEntry;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -23,6 +25,9 @@ class GalleryResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
                     ->image()
                     ->multiple()
@@ -38,7 +43,7 @@ class GalleryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -52,7 +57,15 @@ class GalleryResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\Action::make('images')
+                    ->infolist([
+                        ImageEntry::make('image')
+                            ->label(function ($record) {
+                                return $record->name;
+                            }),
+                    ]),
+
+                Tables\Actions\EditAction::make()->slideOver(),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([

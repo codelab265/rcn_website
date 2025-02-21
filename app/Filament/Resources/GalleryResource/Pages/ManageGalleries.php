@@ -14,7 +14,7 @@ class ManageGalleries extends ManageRecords
     {
         return [
             Actions\CreateAction::make()
-                ->modalWidth('md'),
+                ->slideOver(),
         ];
     }
 }
