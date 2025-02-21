@@ -58,6 +58,8 @@ class GalleryResource extends Resource
             ])
             ->actions([
                 Tables\Actions\Action::make('images')
+                    ->color('success')
+                    ->icon('heroicon-o-photo')
                     ->infolist([
                         ImageEntry::make('image')
                             ->label(function ($record) {
