@@ -5,17 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Gallery extends Model
+class Album extends Model
 {
-
     use HasFactory;
-
-    protected $fillable = [
-        'image',
-        'name',
-    ];
-
+    protected $fillable = ['name', 'images'];
     protected $casts = [
-        'image' => 'array',
+        'images' => 'array',
     ];
 }
